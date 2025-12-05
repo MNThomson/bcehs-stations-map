@@ -158,11 +158,11 @@
             flex-shrink: 0;
         }
 
-        .popup-icon.station { background: linear-gradient(135deg, var(--accent-red), #c41e3a); }
-        .popup-icon.annex { background: linear-gradient(135deg, var(--accent-blue), #2a5a7a); }
-        .popup-icon.dispatch { background: linear-gradient(135deg, #9b59b6, #7d3c98); }
-        .popup-icon.special { background: linear-gradient(135deg, var(--accent-orange), #d4820c); }
-        .popup-icon.cct { background: linear-gradient(135deg, #27ae60, #1e8449); }
+        .popup-icon.station { background: linear-gradient(135deg, #004a8d, #003366); }
+        .popup-icon.annex { background: linear-gradient(135deg, #6b7280, #4b5563); }
+        .popup-icon.dispatch { background: linear-gradient(135deg, #22c55e, #16a34a); }
+        .popup-icon.special { background: linear-gradient(135deg, #ec1c24, #c41e3a); }
+        .popup-icon.cct { background: linear-gradient(135deg, #ec1c24, #c41e3a); }
 
         .popup-title {
             font-size: 1rem;
@@ -242,11 +242,11 @@
             border-radius: 50%;
         }
 
-        .legend-marker.station { background: var(--accent-red); }
-        .legend-marker.annex { background: var(--accent-blue); }
-        .legend-marker.dispatch { background: #9b59b6; }
-        .legend-marker.special { background: var(--accent-orange); }
-        .legend-marker.cct { background: #27ae60; }
+        .legend-marker.station { background: #004a8d; }
+        .legend-marker.annex { background: #6b7280; }
+        .legend-marker.dispatch { background: #22c55e; }
+        .legend-marker.special { background: #ec1c24; }
+        .legend-marker.cct { background: #ec1c24; }
 
         /* Custom marker styles */
         .custom-marker {
@@ -267,11 +267,11 @@
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
-        .marker-pin.station { background: var(--accent-red); }
-        .marker-pin.annex { background: var(--accent-blue); }
-        .marker-pin.dispatch { background: #9b59b6; }
-        .marker-pin.special { background: var(--accent-orange); }
-        .marker-pin.cct { background: #27ae60; }
+        .marker-pin.station { background: #004a8d; }
+        .marker-pin.annex { background: #6b7280; opacity: 0.7; }
+        .marker-pin.dispatch { background: #22c55e; }
+        .marker-pin.special { background: #ec1c24; }
+        .marker-pin.cct { background: #ec1c24; }
 
         .marker-inner {
             width: 8px;
@@ -432,11 +432,11 @@
             // Create custom icon
             function createCustomIcon(type) {
                 const colors = {
-                    station: '#e63946',
-                    annex: '#457b9d',
-                    dispatch: '#9b59b6',
-                    special: '#f4a261',
-                    cct: '#27ae60'
+                    station: '#004a8d',
+                    annex: '#6b7280',
+                    dispatch: '#22c55e',
+                    special: '#ec1c24',
+                    cct: '#ec1c24'
                 };
 
                 return L.divIcon({
