@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCEHS Stations Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f1419;
+            --bg-card: #1a1f26;
+            --accent-red: #e63946;
+            --accent-orange: #f4a261;
+            --accent-blue: #457b9d;
+            --text-primary: #f1faee;
+            --text-secondary: #a8b2c1;
+            --border-color: #2d3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #242b35 100%);
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-orange), var(--accent-red));
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-red), #c41e3a);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        #map {
+            height: calc(100vh - 90px);
+            width: 100%;
+            background: var(--bg-dark);
+        }
+
+        /* Custom popup styles */
+        .leaflet-popup-content-wrapper {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-color);
+        }
+
+        .leaflet-popup-content {
+            margin: 0;
+            min-width: 280px;
+        }
+
+        .leaflet-popup-tip {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-left: none;
+        }
+
+        .popup-content {
+            padding: 1rem;
+        }
+
+        .popup-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .popup-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .popup-icon.station { background: linear-gradient(135deg, var(--accent-red), #c41e3a); }
+        .popup-icon.annex { background: linear-gradient(135deg, var(--accent-blue), #2a5a7a); }
+        .popup-icon.dispatch { background: linear-gradient(135deg, #9b59b6, #7d3c98); }
+        .popup-icon.special { background: linear-gradient(135deg, var(--accent-orange), #d4820c); }
+        .popup-icon.cct { background: linear-gradient(135deg, #27ae60, #1e8449); }
+
+        .popup-title {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .popup-location {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .popup-address {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .popup-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .tag-cp { background: rgba(230, 57, 70, 0.2); color: #ff6b7a; }
+        .tag-soc { background: rgba(244, 162, 97, 0.2); color: var(--accent-orange); }
+        .tag-annex { background: rgba(69, 123, 157, 0.2); color: #6ba3c7; }
+        .tag-dispatch { background: rgba(155, 89, 182, 0.2); color: #c39bd3; }
+        .tag-special { background: rgba(244, 162, 97, 0.2); color: var(--accent-orange); }
+        .tag-cct { background: rgba(39, 174, 96, 0.2); color: #58d68d; }
+        .tag-crs { background: rgba(241, 196, 15, 0.2); color: #f7dc6f; }
+        .tag-laat { background: rgba(52, 152, 219, 0.2); color: #5dade2; }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .legend h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-marker {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .legend-marker.station { background: var(--accent-red); }
+        .legend-marker.annex { background: var(--accent-blue); }
+        .legend-marker.dispatch { background: #9b59b6; }
+        .legend-marker.special { background: var(--accent-orange); }
+        .legend-marker.cct { background: #27ae60; }
+
+        /* Custom marker styles */
+        .custom-marker {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .marker-pin {
+            width: 24px;
+            height: 24px;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .marker-pin.station { background: var(--accent-red); }
+        .marker-pin.annex { background: var(--accent-blue); }
+        .marker-pin.dispatch { background: #9b59b6; }
+        .marker-pin.special { background: var(--accent-orange); }
+        .marker-pin.cct { background: #27ae60; }
+
+        .marker-inner {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        /* Zoom controls */
+        .leaflet-control-zoom {
+            border: none !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .leaflet-control-zoom a {
+            background: var(--bg-card) !important;
+            color: var(--text-primary) !important;
+            border: 1px solid var(--border-color) !important;
+        }
+
+        .leaflet-control-zoom a:hover {
+            background: #242b35 !important;
+        }
+
+        .leaflet-control-zoom-in {
+            border-radius: 8px 8px 0 0 !important;
+        }
+
+        .leaflet-control-zoom-out {
+            border-radius: 0 0 8px 8px !important;
+        }
+
+        /* Attribution */
+        .leaflet-control-attribution {
+            background: var(--bg-card) !important;
+            color: var(--text-secondary) !important;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px 0 0 0;
+        }
+
+        .leaflet-control-attribution a {
+            color: var(--accent-blue) !important;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .stats {
+                gap: 1.5rem;
+            }
+
+            .legend {
+                bottom: 20px;
+                left: 10px;
+                right: 10px;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-section">
+            <div class="logo-icon">🚑</div>
+            <div class="logo-text">
+                <h1>BCEHS Stations</h1>
+                <p>BC Emergency Health Services</p>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="total-stations">-</div>
+                <div class="stat-label">Total Stations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="regions">7</div>
+                <div class="stat-label">Regions</div>
+            </div>
+        </div>
+    </header>
+
+    <div id="map"></div>
+
+    <div class="legend">
+        <h3>Station Types</h3>
+        <div class="legend-item">
+            <div class="legend-marker station"></div>
+            <span>Regular Station</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-marker annex"></div>
+            <span>Annex</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-marker dispatch"></div>
+            <span>Dispatch</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-marker special"></div>
+            <span>Special Operations</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-marker cct"></div>
+            <span>Critical Care Transport</span>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // GeoJSON data
+        const stationsData = {
+            "type": "FeatureCollection",
+            "features": []
+        };
+
+        // Load GeoJSON data
+        fetch('stations.geojson')
+            .then(response => response.json())
+            .then(data => {
+                stationsData.features = data.features;
+                initMap();
+            })
+            .catch(error => {
+                console.error('Error loading GeoJSON:', error);
+            });
+
+        function initMap() {
+            // Update stats
+            document.getElementById('total-stations').textContent = stationsData.features.length;
+
+            // Initialize map centered on BC
+            const map = L.map('map', {
+                zoomControl: true
+            }).setView([53.7267, -127.6476], 5);
+
+            // Add dark tile layer
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(map);
+
+            // Get marker type based on tags
+            function getMarkerType(tags) {
+                if (tags.includes('cct')) return 'cct';
+                if (tags.includes('dispatch')) return 'dispatch';
+                if (tags.includes('special') || tags.includes('crs')) return 'special';
+                if (tags.includes('annex')) return 'annex';
+                return 'station';
+            }
+
+            // Create custom icon
+            function createCustomIcon(type) {
+                const colors = {
+                    station: '#e63946',
+                    annex: '#457b9d',
+                    dispatch: '#9b59b6',
+                    special: '#f4a261',
+                    cct: '#27ae60'
+                };
+
+                return L.divIcon({
+                    className: 'custom-marker',
+                    html: `<div class="marker-pin ${type}"><div class="marker-inner"></div></div>`,
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 24],
+                    popupAnchor: [0, -24]
+                });
+            }
+
+            // Create popup content
+            function createPopupContent(props) {
+                const markerType = getMarkerType(props.tags || []);
+                const tags = (props.tags || []).filter(t => t && t.trim() !== '');
+                
+                const tagLabels = {
+                    'cp': 'Community Paramedic',
+                    'soc': 'Scheduled On-Call',
+                    'annex': 'Annex',
+                    'dispatch': 'Dispatch',
+                    'special': 'Special Ops',
+                    'cct': 'Critical Care',
+                    'crs': 'Central Reporting',
+                    'laat': 'LAAT'
+                };
+
+                const tagsHtml = tags.map(tag => 
+                    `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
+                ).join('');
+
+                return `
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <div class="popup-icon ${markerType}">🚑</div>
+                            <div>
+                                <div class="popup-title">${props.title || props.station}</div>
+                                <div class="popup-location">${props.location || ''}</div>
+                            </div>
+                        </div>
+                        <div class="popup-address">${props.address || 'Address not available'}</div>
+                        ${tagsHtml ? `<div class="popup-tags">${tagsHtml}</div>` : ''}
+                    </div>
+                `;
+            }
+
+            // Add markers
+            stationsData.features.forEach(feature => {
+                const coords = feature.geometry.coordinates;
+                const props = feature.properties;
+                const markerType = getMarkerType(props.tags || []);
+
+                const marker = L.marker([coords[1], coords[0]], {
+                    icon: createCustomIcon(markerType)
+                }).addTo(map);
+
+                marker.bindPopup(createPopupContent(props), {
+                    maxWidth: 320,
+                    className: 'custom-popup'
+                });
+            });
+
+            // Fit bounds to show all markers
+            const group = L.featureGroup(
+                stationsData.features.map(f => 
+                    L.marker([f.geometry.coordinates[1], f.geometry.coordinates[0]])
+                )
+            );
+            map.fitBounds(group.getBounds().pad(0.1));
+        }
+    </script>
+</body>
+</html>
+

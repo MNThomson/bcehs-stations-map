@@ -1,0 +1,4091 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 102 (Alert Bay)",
+        "station": "Station 102",
+        "location": "Alert Bay (ALB)",
+        "address": "359 Fir Street, Alert Bay, BC V0N 1A0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 102
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.9237796,
+          50.5792729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 103 (Saltspring)",
+        "station": "Station 103",
+        "location": "Salt Spring Island (GAN)",
+        "address": "275 Park Drive, Salt Spring Island, BC V8K 2S1",
+        "tags": [
+          "cp"
+        ],
+        "number": 103
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.5105369,
+          48.8590402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 104 (Mayne Island)",
+        "station": "Station 104",
+        "location": "Mayne Island (MAY)",
+        "address": "524 Felix Jack Road, Mayne Island, BC V0N 2J0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 104
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2849329,
+          48.8468335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 105 (Central Saanich)",
+        "station": "Station 105",
+        "location": "Central Saanich (SAA)",
+        "address": "2188 Mt. Newton X Road, Saanichon, BC V8M 2B2",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 105
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4085189,
+          48.5944015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 106 (Sidney)",
+        "station": "Station 106",
+        "location": "Sidney (SID)",
+        "address": "2265 Oakville Ave., Sidney, BC V8L 1V6",
+        "tags": [
+          ""
+        ],
+        "number": 106
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4048748,
+          48.6466552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 107 (Sooke)",
+        "station": "Station 107",
+        "location": "Sooke (SOO)",
+        "address": "6742 West Coast Road, Sooke, BC V9Z 0E4",
+        "tags": [
+          "cp"
+        ],
+        "number": 107
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.7255532,
+          48.3751992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 108 (Campbell River)",
+        "station": "Station 108",
+        "location": "Campbell River (CAM)",
+        "address": "348 2nd, Ave, Campbell River, BC V9W 3T9",
+        "tags": [
+          "cp"
+        ],
+        "number": 108
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.2428614,
+          50.0113796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 109 (Langford)",
+        "station": "Station 109",
+        "location": "Langford (VIC)",
+        "address": "2764 Leigh Rd, Victoria, BC V9B 4G1",
+        "tags": [
+          "dispatch"
+        ],
+        "number": 109
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.518209,
+          48.4516706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 114 (Pender Island)",
+        "station": "Station 114",
+        "location": "Pender Island (PEI)",
+        "address": "5715 Canal Road, Pender Island, BC V0N 2M1",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 114
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2672434,
+          48.7652004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 115 (Port Renfrew)",
+        "station": "Station 115",
+        "location": "Port Renfrew (POR)",
+        "address": "6645 Klannanith Road, Port Renfrew, BC V0S 1K0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 115
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.4013768,
+          48.5577688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 117 (Galiano Island)",
+        "station": "Station 117",
+        "location": "Galiano Island (GAL)",
+        "address": "660 Porlier Pass Road, Galiano Island, BC V0N 1P0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 117
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3542337,
+          48.892493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 118 (Victoria - Fairfield)",
+        "station": "Annex 118",
+        "location": "Victoria-Fairfield (VIC)",
+        "address": "412 Quebec St, Room 103 - 412, Quebec St., Victoria, BC V8V 1W5",
+        "tags": [
+          "annex"
+        ],
+        "number": 118
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3739806,
+          48.4210111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 119 (Lake Cowichan)",
+        "station": "Station 119",
+        "location": "Lake Cowichan (LAK)",
+        "address": "3 Northshore, Lake Cowichan, BC V0R 2G0",
+        "tags": [
+          "cp"
+        ],
+        "number": 119
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.054141,
+          48.8284631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 120 (Nanaimo South)",
+        "station": "Station 120",
+        "location": "Nanaimo - South (NAN)",
+        "address": "231 Prideaux Street, Nanaimo, BC V9R 2M9",
+        "tags": [
+          ""
+        ],
+        "number": 120
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9448039,
+          49.1656572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 121 (Victoria - Royal Oak)",
+        "station": "Annex 121",
+        "location": "Victoria - Royal Oak (VIC)",
+        "address": "4528 Viewmont Ave #121, Victoria, BC V8Z 5L2",
+        "tags": [
+          "annex"
+        ],
+        "number": 121
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3885609,
+          48.4958853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 122 (Nanaimo North)",
+        "station": "Station 122",
+        "location": "Nanaimo North (NAN)",
+        "address": "4415 Boban Drive, Nanaimo, BC V9T 5V9",
+        "tags": [
+          ""
+        ],
+        "number": 122
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.0398371,
+          49.2089753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 124 (Port Alberni)",
+        "station": "Station 124",
+        "location": "Port Alberni (POA)",
+        "address": "4760 Roger Street, Port Alberni, BC V9Y 3Z2",
+        "tags": [
+          ""
+        ],
+        "number": 124
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.8042127,
+          49.254136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 125 (Victoria - Shelbourne)",
+        "station": "Annex 125",
+        "location": "Shelbourne (VIC)",
+        "address": "3987 Shelbourne St, Victoria, BC, V8N 3E1",
+        "tags": [
+          "annex"
+        ],
+        "number": 125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3323771,
+          48.4714755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 126 (Port Hardy)",
+        "station": "Station 126",
+        "location": "Port Hardy (POH)",
+        "address": "7100 Beverley Parnham Way, Port Hardy, BC V0N 2P0",
+        "tags": [
+          "cp"
+        ],
+        "number": 126
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.5034961,
+          50.7207641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 127 (Victoria - Esquimalt)",
+        "station": "Annex 127",
+        "location": "Victoria - Esquimalt (VIC)",
+        "address": "924 Ellery St., Victoria, BC V9A 4S1",
+        "tags": [
+          "annex"
+        ],
+        "number": 127
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4006517,
+          48.4374928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 129 (Port McNeill)",
+        "station": "Station 129",
+        "location": "Port McNeill (POM)",
+        "address": "2415 Catala Place, Port McNeill, BC V0N 2R0",
+        "tags": [
+          "cp"
+        ],
+        "number": 129
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.0740891,
+          50.5818737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 130 (Parksville)",
+        "station": "Station 130",
+        "location": "Parksville (PAR)",
+        "address": "493 Alberni Highway, Parksville, BC V9P 1J9",
+        "tags": [
+          ""
+        ],
+        "number": 130
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.3255313,
+          49.3102998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 131 (Sayward)",
+        "station": "Station 131",
+        "location": "Sayward (SAY)",
+        "address": "630 Kelsey Way, Sayward, BC V0P 1R0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 131
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.9590681,
+          50.3783701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 132 (Sointula)",
+        "station": "Station 132",
+        "location": "Sointula (SOI)",
+        "address": "125 18th, Ave, Sointula, BC V0N 3E0 ",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 132
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.0159972,
+          50.6263318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 133 (Tahsis)",
+        "station": "Station 133",
+        "location": "Tahsis (TAH)",
+        "address": "123 Harborview Road, Tahsis, BC V0P 1X0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 133
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.6549755,
+          49.9239344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 134 (Ucluelet)",
+        "station": "Station 134",
+        "location": "Ucluelet (UCL)",
+        "address": "2072 Peninsula Road, Ucluelet, BC V0R 3A0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 134
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.5624734,
+          48.9454755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 135 (Zeballos)",
+        "station": "Station 135",
+        "location": "Zeballos (ZEB)",
+        "address": "500 Park Way Road, Zeballos, BC V0P 2A0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 135
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.8519643,
+          49.9894121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 136 (Tofino)",
+        "station": "Station 136",
+        "location": "Tofino (TOF)",
+        "address": "1009 Campbell St, Tofino, BC V0R 2Z0",
+        "tags": [
+          "cp"
+        ],
+        "number": 136
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.8901058,
+          49.139842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 137 (Mill Bay)",
+        "station": "Station 137",
+        "location": "Mill Bay (MIL)",
+        "address": "955 Shawnigan Lake - Mill Bay Rd., Mill Bay, BC V0R 2P0",
+        "tags": [
+          ""
+        ],
+        "number": 137
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.5677479,
+          48.6579676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 138 (Qualicum Beach)",
+        "station": "Station 138",
+        "location": "Qualicum Beach (QUB)",
+        "address": "787 Jones St., Qualicum Beach, BC V9K 1R5",
+        "tags": [
+          ""
+        ],
+        "number": 138
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.4496235,
+          49.3437588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 140 (Victoria CRS)",
+        "station": "Station 140",
+        "location": "Victoria Central Reporting Station",
+        "address": "3300 Douglas St., Victoria, BC V8Z 3L1",
+        "tags": [
+          "special",
+          "crs"
+        ],
+        "number": 140
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3742608,
+          48.4493957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 149 (Chemainus)",
+        "station": "Station 149",
+        "location": "Chemainus (CHE)",
+        "address": "9911 Chemainus Road, Chemainus, BC V0R 1K1",
+        "tags": [
+          "cp"
+        ],
+        "number": 149
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.728333,
+          48.927183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 150 (Courtenay)",
+        "station": "Station 150",
+        "location": "Courtenay (COU)",
+        "address": "1890 Cliffe Ave., Courtenay, BC V9N 2K8",
+        "tags": [
+          ""
+        ],
+        "number": 150
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.9873217,
+          49.6825964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 150 (Comox)",
+        "station": "Annex 150",
+        "location": "Comox (COU)",
+        "address": "1700 Comox Ave, Comox, BC V9M 1R9",
+        "tags": [
+          "annex"
+        ],
+        "number": 150
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.9227812,
+          49.6724545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 151 (Cumberland)",
+        "station": "Station 151",
+        "location": "Cumberland (CUM)",
+        "address": "2757 Dunsmuir Ave, Cumberland, BC V0R 1S0",
+        "tags": [
+          ""
+        ],
+        "number": 151
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.0262209,
+          49.619111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 152 (Duncan)",
+        "station": "Station 152",
+        "location": "Duncan (DUN)",
+        "address": "2582 Lewis St, Duncan, BC V9L 2Z1",
+        "tags": [
+          ""
+        ],
+        "number": 152
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.6983668,
+          48.7839689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 153 (Gabriola Island)",
+        "station": "Station 153",
+        "location": "Gabriola Island (GAB)",
+        "address": "725 Church Street, Gabriola Island, BC V0R 1X3",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 153
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.8356013,
+          49.1770341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 155 (Gold River)",
+        "station": "Station 155",
+        "location": "Gold River (GOR)",
+        "address": "503 Muchalat Drive, Gold River, BC V0P 1G0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 155
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.0462509,
+          49.7816784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 159 (Ladysmith)",
+        "station": "Station 159",
+        "location": "Ladysmith (LAD)",
+        "address": "1117 4th Ave, Ladysmith, BC V9G 1A5",
+        "tags": [
+          ""
+        ],
+        "number": 159
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.8282006,
+          48.9954084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 169 (Cortes Island)",
+        "station": "Station 169",
+        "location": "Cortes Island (COR)",
+        "address": "959 Beasley Road, Cortes Island, BC V0P 1K0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 169
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.9822332,
+          50.0590751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 170 (Quadra Island)",
+        "station": "Station 170",
+        "location": "Quadra Island (QUA)",
+        "address": "840 Heriot Bay Road, Quadra Island, BC V0P 1N0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 170
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.1947957,
+          50.0521089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 171 (Denman Island)",
+        "station": "Station 171",
+        "location": "Denman Island (DEN)",
+        "address": "5501 Denman Road, Denman Island, BC V0R 1T0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 171
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.7893061,
+          49.5343908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 172 (Port Alice)",
+        "station": "Station 172",
+        "location": "Port Alice (POL)",
+        "address": "1041 Marine Drive, Port Alice, BC V0N 2N0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 172
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.4883058,
+          50.4268754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 173 (Bowser)",
+        "station": "Station 173",
+        "location": "Bowser (BOW)",
+        "address": "6994 Island Highway West, #10, Bowser, BC V0R 1G0",
+        "tags": [
+          ""
+        ],
+        "number": 173
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.6746495,
+          49.4345642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 180 (Vancouver Island CCT)",
+        "station": "Station 180",
+        "location": "Vancouver Island CCT (NAN)",
+        "address": "4415 Boban Drive, Nanaimo, BC V9T 5V9",
+        "tags": [
+          "cct"
+        ],
+        "number": 180
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.0398371,
+          49.2089753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 185 (Duty Supervisor Group)",
+        "station": "Station 185",
+        "location": "Duty Supervisor Group",
+        "address": "3300 Douglas St., Victoria, BC V8Z 3L1",
+        "tags": [
+          "special"
+        ],
+        "number": 185
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3742608,
+          48.4493957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 202 (Abbotsford)",
+        "station": "Station 202",
+        "location": "Abbotsford (ABB)",
+        "address": "2000 Abbotsford Way, Abbotsford, BC V2S 6X8",
+        "tags": [
+          ""
+        ],
+        "number": 202
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2765181,
+          49.0385679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 203 (Agassiz)",
+        "station": "Station 203",
+        "location": "Agassiz (AGA)",
+        "address": "7260 Pioneer Ave, Agassiz, BC V0M 1A0",
+        "tags": [
+          ""
+        ],
+        "number": 203
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.7592251,
+          49.2382084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 204 (Boston Bar)",
+        "station": "Station 204",
+        "location": "Boston Bar (BOS)",
+        "address": "48030 Larch Road, Boston Bar, BC V0K 1C0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 204
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.4418573,
+          49.8683667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 205 (Abbotsford - Mt Lehman)",
+        "station": "Station 205",
+        "location": "Abbotsford - Mt Lehman (ABB)",
+        "address": "2855 Mt Lehman Rd, Abbotsford, BC V4X 2N5",
+        "tags": [
+          ""
+        ],
+        "number": 205
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3816533,
+          49.0544559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 205 (Abbotsford)",
+        "station": "Annex 205",
+        "location": "Abbotsford (ABB)",
+        "address": "120 Townline Rd #1235, Abbotsford, BC V2T 6E1",
+        "tags": [
+          "annex"
+        ],
+        "number": 205
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3593431,
+          49.0045797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 206 (Chilliwack)",
+        "station": "Station 206",
+        "location": "Chilliwack (CHI)",
+        "address": "8530 Young Rd, Chilliwack, BC V2P 4P1",
+        "tags": [
+          ""
+        ],
+        "number": 206
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9507976,
+          49.1573807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 214 (Hope)",
+        "station": "Station 214",
+        "location": "Hope (HOP)",
+        "address": "999 Water Ave, Hope, BC, V0X 1L4",
+        "tags": [
+          ""
+        ],
+        "number": 214
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.4407972,
+          49.3758488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 215 (Mission)",
+        "station": "Station 215",
+        "location": "Mission (MIS)",
+        "address": "7366 Hurd St, Mission, BC V2V 3H5",
+        "tags": [
+          ""
+        ],
+        "number": 215
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3323051,
+          49.1358496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 219 (Pemberton)",
+        "station": "Station 219",
+        "location": "Pemberton (PEM)",
+        "address": "7413 Flint St, Pemberton, BC V0N 2L0",
+        "tags": [
+          "cp"
+        ],
+        "number": 219
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8041102,
+          50.3200445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 222 (Squamish)",
+        "station": "Station 222",
+        "location": "Squamish (SQU)",
+        "address": "38929 Production Way, Squamish, BC V8B 0K4",
+        "tags": [
+          ""
+        ],
+        "number": 222
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1540473,
+          49.7170744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 224 (Whistler)",
+        "station": "Station 224",
+        "location": "Whistler (WHI)",
+        "address": "7192 Lorimer Road, Whistler, BC V0N 1B0",
+        "tags": [
+          ""
+        ],
+        "number": 224
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9607201,
+          50.1226011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 225 (Bowen Island)",
+        "station": "Station 225",
+        "location": "Bowen Island (BOI)",
+        "address": "1034 Miller Rd, Bowen Island, BC V0N 1G1",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 225
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3389733,
+          49.3810033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 226 (Bella Bella)",
+        "station": "Station 226",
+        "location": "Bella Bella (BEB)",
+        "address": "400 Nuda Drive, Bella Bella Indian Reserve, No. 1 / Lot 89, Bella Bella, BC V0T 1Z0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 226
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.1477855,
+          52.1667723
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 227 (Bella Coola)",
+        "station": "Station 227",
+        "location": "Bella Coola (BEL)",
+        "address": "1626 Airport Rd, Bella Coola, BC V0T 1H0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 227
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.5868253,
+          52.3876165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 228 (Texada Island)",
+        "station": "Station 228",
+        "location": "Texada Island (TEX)",
+        "address": "2099 Legion Rd, Van Anda, Texada Island, BC V0N 3K0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 228
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.553198,
+          49.7537069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 229 (Powell River)",
+        "station": "Station 229",
+        "location": "Powell River (POW)",
+        "address": "7057 Duncan St, Powell River, BC V8A 1W1",
+        "tags": [
+          "cp"
+        ],
+        "number": 229
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.5185165,
+          49.8362381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 233 (Lions Bay)",
+        "station": "Station 233",
+        "location": "Lions Bay (LIO)",
+        "address": "410 Centre Road, Lions Bay, BC V0N 2E0",
+        "tags": [
+          ""
+        ],
+        "number": 233
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2350254,
+          49.4588338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 235 (Sechelt)",
+        "station": "Station 235",
+        "location": "Sechelt (SEC)",
+        "address": "5494 Wharf St, Sechelt, BC V0N 3A0",
+        "tags": [
+          ""
+        ],
+        "number": 235
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.7543083,
+          49.471687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 240 (Burnaby)",
+        "station": "Station 240",
+        "location": "Burnaby (VAN)",
+        "address": "5901 Delesalle St, Burnaby, BC V5J 0G8",
+        "tags": [
+          ""
+        ],
+        "number": 240
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.976182,
+          49.2198429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 243 (Arbutus and 13th)",
+        "station": "Station 243",
+        "location": "Arbutus and 13th (VAN)",
+        "address": "2940 Arbutus St, Vancouver, BC V6J 3Y9",
+        "tags": [
+          ""
+        ],
+        "number": 243
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.152854,
+          49.2597241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 244 (Cambie St)",
+        "station": "Annex 244",
+        "location": "Cambie St (VAN)",
+        "address": "6111 Cambie St, RM# P109, Vancouver, BC V5Z 3B2",
+        "tags": [
+          "annex"
+        ],
+        "number": 244
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1168369,
+          49.2296418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 245 (Victoria Dr)",
+        "station": "Station 245",
+        "location": "East King Edward (VAN)",
+        "address": "1538 East King Edward, Vancouver, BC V5N 5Y2",
+        "tags": [
+          ""
+        ],
+        "number": 245
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0729547,
+          49.2482664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 247 (New Westminster - Tri-Cities)",
+        "station": "Station 247",
+        "location": "New Westminster (VAN)",
+        "address": "444 Rousseau St, New Westminster, BC V3L 3R3",
+        "tags": [
+          ""
+        ],
+        "number": 247
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8860607,
+          49.229917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 248 (Downtown East Side)",
+        "station": "Station 248",
+        "location": "Downtown East Side (VAN)",
+        "address": "731 East Cordova, Vancouver, BC V6A 1M2",
+        "tags": [
+          ""
+        ],
+        "number": 248
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0886168,
+          49.2823679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 248 (St Pauls Hospital)",
+        "station": "Annex 248",
+        "location": "St Pauls Hospital (VAN)",
+        "address": "1081 Burrard St, Vancouver, BC V6Z 1Y6",
+        "tags": [
+          "annex"
+        ],
+        "number": 248
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1282326,
+          49.2805247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 249 (Surrey Memorial Hospital)",
+        "station": "Station 249",
+        "location": "Surrey Memorial Hospital (VAN)",
+        "address": "13750 96th Ave, Surrey, BC V3V 1Z2",
+        "tags": [
+          ""
+        ],
+        "number": 249
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8425175,
+          49.1763909
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 250 (Richmond North)",
+        "station": "Station 250",
+        "location": "Richmond North (VAN)",
+        "address": "9680 Cambie Rd, Richmond, BC V6X 1K4",
+        "tags": [
+          ""
+        ],
+        "number": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1162593,
+          49.1844089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 251 (Ladner)",
+        "station": "Station 251",
+        "location": "Ladner (VAN)",
+        "address": "4641 Clarence Taylor Crescent, Delta, BC V4K 4L8",
+        "tags": [
+          ""
+        ],
+        "number": 251
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0600019,
+          49.0873206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 252 (Langley)",
+        "station": "Station 252",
+        "location": "Langley (VAN)",
+        "address": "22347 48th Ave, Langley, BC V3A 3N4",
+        "tags": [
+          ""
+        ],
+        "number": 252
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6048705,
+          49.0896573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 253 (Surrey - Cloverdale)",
+        "station": "Station 253",
+        "location": "Surrey - Cloverdale (VAN)",
+        "address": "5833 176th St, Surrey, BC V3S 4E3",
+        "tags": [
+          ""
+        ],
+        "number": 253
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7352558,
+          49.1085294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 254 (White Rock)",
+        "station": "Station 254",
+        "location": "White Rock (VAN)",
+        "address": "2359 156th St, White Rock, BC V4A 4V5",
+        "tags": [
+          ""
+        ],
+        "number": 254
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7905869,
+          49.0447674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 255 (West Vancouver)",
+        "station": "Station 255",
+        "location": "West Vancouver (VAN)",
+        "address": "1542 Fulton Ave, West Vancouver, BC V7V 1S6",
+        "tags": [
+          ""
+        ],
+        "number": 255
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.157964,
+          49.3313707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 256 (Lions Gate)",
+        "station": "Station 256",
+        "location": "North Vancouver (VAN)",
+        "address": "254 E 13th St, North Vancouver, BC V7L 2L7",
+        "tags": [
+          ""
+        ],
+        "number": 256
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0668209,
+          49.3202367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 256 (Maplewood)",
+        "station": "Annex 256",
+        "location": "North Vancouver (VAN)",
+        "address": "2444 Burr Pl, North Vancouver, BC V7H 3A5",
+        "tags": [
+          "annex"
+        ],
+        "number": 256
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0053723,
+          49.3125113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 257 (Maple Ridge)",
+        "station": "Station 257",
+        "location": "Maple Ridge (VAN)",
+        "address": "22320 Selkirk Ave, Maple Ridge, BC V2X 2X5",
+        "tags": [
+          ""
+        ],
+        "number": 257
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6042213,
+          49.2175552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 258 (Douglas)",
+        "station": "Annex 258",
+        "location": "Burnaby (VAN)",
+        "address": "925 Douglas Rd, Burnaby, BC V5C 6J7",
+        "tags": [
+          "annex"
+        ],
+        "number": 258
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0229086,
+          49.2759951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 259 (səmiq̓wəʔelə / Riverview)",
+        "station": "Station 259",
+        "location": "Coquitlam (VAN)",
+        "address": "4W8 Kerria Dr., Coquitlam, BC, V3C 4W8",
+        "tags": [
+          ""
+        ],
+        "number": 259
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8080065,
+          49.2480788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 261 (West 7th)",
+        "station": "Station 261",
+        "location": "West 7th (VAN)",
+        "address": "181 West 7th Ave, Vancouver, BC V5Y 1L8",
+        "tags": [
+          ""
+        ],
+        "number": 261
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1089045,
+          49.2650129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 262 (UBC)",
+        "station": "Station 262",
+        "location": "UBC (VAN)",
+        "address": "2333 Wesbrook Mall, Vancouver, BC V6T 1Z3",
+        "tags": [
+          ""
+        ],
+        "number": 262
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2435838,
+          49.2632229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 263 (Port Coquitlam - Tri-Cities)",
+        "station": "Station 263",
+        "location": "Coquitlam (VAN)",
+        "address": "2601 Lougheed Hwe, #122, Coquitlam, BC V3C 4J2",
+        "tags": [
+          ""
+        ],
+        "number": 263
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7991459,
+          49.2595672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 264 (Special Operations)",
+        "station": "Station 264",
+        "location": "Special Operations (VAN)",
+        "address": "5901 Delesalle St.Burnaby, BC V5J 0G8",
+        "tags": [
+          "special"
+        ],
+        "number": 264
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.976182,
+          49.2198429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 265 (Madeira Park)",
+        "station": "Station 265",
+        "location": "Madeira Park (MAD)",
+        "address": "4990 Gonzales Rd, Madeira Park, BC V0N 2H0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 265
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.02709,
+          49.62097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 266 (Delta North)",
+        "station": "Station 266",
+        "location": "Delta North (VAN)",
+        "address": "7893 Scott Rd, Delta, BC V4C 6P6",
+        "tags": [
+          ""
+        ],
+        "number": 266
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8907646,
+          49.1467126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 267 (Langley North)",
+        "station": "Station 267",
+        "location": "Langley North (VAN)",
+        "address": "20089 92a Ave, Langley, BC V1M 3A5",
+        "tags": [
+          ""
+        ],
+        "number": 267
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6656436,
+          49.1710998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 268 (Gibsons)",
+        "station": "Station 268",
+        "location": "Gibsons (GIB)",
+        "address": "746 North Road RR 9, Gibsons, BC V0N 1V9",
+        "tags": [
+          ""
+        ],
+        "number": 268
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.5131663,
+          49.4103499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 269 (Richmond South)",
+        "station": "Station 269",
+        "location": "Richmond - South (VAN)",
+        "address": "3999 Williams Road, Richmond, BC V7E 1J5",
+        "tags": [
+          ""
+        ],
+        "number": 269
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1817463,
+          49.1413225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 270 (YVR Airport Bike Squad)",
+        "station": "Station 270",
+        "location": "YVR Airport Bike Squad (VAN)",
+        "address": "3211 Grant McConachie Way, Richmond, BC V7B 0A5",
+        "tags": [
+          ""
+        ],
+        "number": 270
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1798808,
+          49.1982189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 280 (Vancouver CCT)",
+        "station": "Station 280",
+        "location": "Vancouver CCT (VAN)",
+        "address": "201-4360 Agar Drive, Richmond, BC V7B 1A3",
+        "tags": [
+          "cct"
+        ],
+        "number": 280
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1760952,
+          49.1833211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 281 (Logistics)",
+        "station": "Station 281",
+        "location": "Logistics",
+        "address": "5901 Delesalle St.Burnaby, BC V5J 0G8",
+        "tags": [
+          "special"
+        ],
+        "number": 281
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.976182,
+          49.2198429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 283 (Infant Transport Team)",
+        "station": "Station 283",
+        "location": "Infant Transport Team (VAN)",
+        "address": "4480 Oak St., Entrance #76, Vancouver, BC V6H 3V4",
+        "tags": [
+          "cct"
+        ],
+        "number": 283
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.127605,
+          49.2454182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 287 (Paramedic Specialists)",
+        "station": "Station 287",
+        "location": "Paramedic Specialists (VAN)",
+        "address": "302-2955 Virtual Way, Vancouver, BC V5M 4X6",
+        "tags": [
+          "special"
+        ],
+        "number": 287
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0418317,
+          49.2611526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 288 (Transfer Fleet)",
+        "station": "Station 288",
+        "location": "Surrey (VAN)",
+        "address": "16300 104 Ave, Surrey, BC V4N 1Y5",
+        "tags": [
+          ""
+        ],
+        "number": 288
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7691782,
+          49.1908534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 291 (Pitt Meadows)",
+        "station": "Annex 291",
+        "location": "Pitt Meadows (VAN)",
+        "address": "12047 Harris Rd. Pitt Meadows BC V3Y 2B5",
+        "tags": [
+          "annex"
+        ],
+        "number": 291
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6900805,
+          49.2213551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 299 (Vancouver Dispatch)",
+        "station": "Station 299",
+        "location": "Vancouver Dispatch (VAN)",
+        "address": "302-2955 Virtual Way, Vancouver, BC V5M 4X6",
+        "tags": [
+          "dispatch"
+        ],
+        "number": 299
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0418317,
+          49.2611526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 302 (Armstrong)",
+        "station": "Station 302",
+        "location": "Armstrong (ARM)",
+        "address": "3800 Patten Drive, Armstrong, BC V0E 1B2",
+        "tags": [
+          ""
+        ],
+        "number": 302
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.21075,
+          50.440385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 303 (Ashcroft)",
+        "station": "Station 303",
+        "location": "Ashcroft (ASH)",
+        "address": "600 Elm St, Ashcroft, BC V0K 1A0",
+        "tags": [
+          "cp"
+        ],
+        "number": 303
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.2769681,
+          50.7354793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 304 (Seton Portage)",
+        "station": "Station 304",
+        "location": "Seton Portage (SET)",
+        "address": "7373 Seton Portage Rd, Seton Portage, BC V0N 3B0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 304
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2869187,
+          50.7074564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 306 (Barriere)",
+        "station": "Station 306",
+        "location": "Barriere (BAR)",
+        "address": "4521 Barriere Town Road, Barriere, BC V0E 1E0",
+        "tags": [
+          "cp"
+        ],
+        "number": 306
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.1252403,
+          51.1797712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 307 (Chase)",
+        "station": "Station 307",
+        "location": "Chase (CHA)",
+        "address": "833 Thompson Ave, Chase, BC V0E 1M0",
+        "tags": [
+          "cp"
+        ],
+        "number": 307
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.6850978,
+          50.8184166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 308 (Clinton)",
+        "station": "Station 308",
+        "location": "Clinton (CLI)",
+        "address": "1616 Hwy 97 North, Clinton, BC V0K 1K0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 308
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.2777351,
+          50.6803019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 309 (Anahim Lake)",
+        "station": "Station 309",
+        "location": "Anahim Lake (ANA)",
+        "address": "6637 Martin Road, Anahim Lake, BC V0L 1C0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 309
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.296173,
+          52.463489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 311 (Enderby)",
+        "station": "Station 311",
+        "location": "Enderby (END)",
+        "address": "715 - 3rd Ave, Enderby, BC V0E 1V0",
+        "tags": [
+          ""
+        ],
+        "number": 311
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.1414918,
+          50.5464466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 312 (Sun Peaks)",
+        "station": "Annex 312",
+        "location": "Sun Peaks (CHA)",
+        "address": "3115 Creekside Way, Sun Peaks, BC V0E 5N0",
+        "tags": [
+          "annex"
+        ],
+        "number": 312
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.889331,
+          50.884389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 313 (Gold Bridge)",
+        "station": "Station 313",
+        "location": "Gold Bridge (GOB)",
+        "address": "Fergusson Ave, Gold Bridge, BC V0K 1P0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 313
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8364451,
+          50.8535212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 314 (Kamloops South)",
+        "station": "Station 314",
+        "location": "Kamloops South (KAM)",
+        "address": "1257 Dalhousie Dr, Kamloops, BC V2C 5Z5",
+        "tags": [
+          ""
+        ],
+        "number": 314
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.3634097,
+          50.6664554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 315 (Kamloops North)",
+        "station": "Station 315",
+        "location": "Kamloops North (KAM)",
+        "address": "239 Clapperton Rd, Kamloops, BC V2B 1E4",
+        "tags": [
+          ""
+        ],
+        "number": 315
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.3534156,
+          50.6867258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 317 (Keremeos)",
+        "station": "Station 317",
+        "location": "Keremeos (KER)",
+        "address": "716 - 6th Ave, Keremeos, BC V0X 1N0",
+        "tags": [
+          ""
+        ],
+        "number": 317
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.8218987,
+          49.2063094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 318 (Lillooet)",
+        "station": "Station 318",
+        "location": "Lillooet (LIL)",
+        "address": "308 Park Drive, Lillooet, BC V0K 1V0",
+        "tags": [
+          "cp"
+        ],
+        "number": 318
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9268386,
+          50.6995621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 319 (Logan Lake)",
+        "station": "Station 319",
+        "location": "Logan Lake (LOG)",
+        "address": "5A Beryl Dr, Logan Lake, BC V0K 1W0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 319
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.8124283,
+          50.4953975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 320 (Lumby)",
+        "station": "Station 320",
+        "location": "Lumby (LUM)",
+        "address": "1785 Miller St, Lumby, BC V0E 2G0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 320
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.9617834,
+          50.2491389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 321 (Lytton)",
+        "station": "Station 321",
+        "location": "Lytton (LYT)",
+        "address": "1535 St. George's Road, Lytton, BC V0K 1Z0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 321
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.5808412,
+          50.2320771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 324 (Merritt)",
+        "station": "Station 324",
+        "location": "Merritt (MER)",
+        "address": "3451 Voght St., Merritt, BC V1K 1C6",
+        "tags": [
+          "cp"
+        ],
+        "number": 324
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.7728,
+          50.1215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 326 (Oliver)",
+        "station": "Station 326",
+        "location": "Oliver (OLI)",
+        "address": "6070 Station St, Oliver, BC V0H 1T0",
+        "tags": [
+          ""
+        ],
+        "number": 326
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.5492107,
+          49.1820064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 327 (100 Mile House)",
+        "station": "Station 327",
+        "location": "100 Mile House (ONE)",
+        "address": "555 A Cedar Ave, 100 Mile House, BC V0K 2E0",
+        "tags": [
+          ""
+        ],
+        "number": 327
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.2923354,
+          51.6393148
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 328 (Osoyoos)",
+        "station": "Station 328",
+        "location": "Osoyoos (OSO)",
+        "address": "#14 Eagle Court, Osoyoos, BC V0H 1V0",
+        "tags": [
+          "cp"
+        ],
+        "number": 328
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.4744122,
+          49.0335708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 329 (Penticton)",
+        "station": "Station 329",
+        "location": "Penticton (PEN)",
+        "address": "#90 - 1475 Fairview Road, Penticton, BC V2A 7W5",
+        "tags": [
+          ""
+        ],
+        "number": 329
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.5937583,
+          49.4822312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 330 (Princeton)",
+        "station": "Station 330",
+        "location": "Princeton (PRI)",
+        "address": "98 Ridgewood Dr, Princeton, BC V0X 1W0",
+        "tags": [
+          "cp"
+        ],
+        "number": 330
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.5270788,
+          49.4541033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 332 (Salmon Arm)",
+        "station": "Station 332",
+        "location": "Salmon Arm (SLA)",
+        "address": "3290 - 10th Ave NE, Salmon Arm, BC V1E 4S4",
+        "tags": [
+          ""
+        ],
+        "number": 332
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.2477732,
+          50.7065791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 333 (Sicamous)",
+        "station": "Station 333",
+        "location": "Sicamous (SIC)",
+        "address": "1129 Paradise Ave, Sicamous, BC V0E 2V0",
+        "tags": [
+          "cp"
+        ],
+        "number": 333
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.9806578,
+          50.835708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 334 (Summerland)",
+        "station": "Station 334",
+        "location": "Summerland (SUM)",
+        "address": "14202 Rosedale Ave, Summerland, BC V0H 1Z0",
+        "tags": [
+          ""
+        ],
+        "number": 334
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.6780141,
+          49.60571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 335 (Clearwater)",
+        "station": "Station 335",
+        "location": "Clearwater (CLE)",
+        "address": "620 Park Drive, Clearwater, BC V0E 1N0",
+        "tags": [
+          "cp"
+        ],
+        "number": 335
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.0211458,
+          51.6469214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 336 (Revelstoke)",
+        "station": "Station 336",
+        "location": "Revelstoke (REV)",
+        "address": "900 Oscar St, Revelstoke, BC V0E 2S0",
+        "tags": [
+          "cp"
+        ],
+        "number": 336
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.1821454,
+          50.9937841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 337 (Vernon)",
+        "station": "Station 337",
+        "location": "Vernon (VER)",
+        "address": "3011 - 35th Ave, Vernon, BC V1T 2S9",
+        "tags": [
+          ""
+        ],
+        "number": 337
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.27209,
+          50.2676299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 338 (Blue River)",
+        "station": "Station 338",
+        "location": "Blue River (BLU)",
+        "address": "833 Cedar St, Blue River, BC V0E 1J0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 338
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.3078028,
+          52.1051075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 339 (West Kelowna)",
+        "station": "Station 339",
+        "location": "West Kelowna (WES)",
+        "address": "2577 Lower Glenrosa Rd, West Kelowna, BC V4T 1P9",
+        "tags": [
+          ""
+        ],
+        "number": 339
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.634839,
+          49.8298442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 340 (Kelowna - Lawrence)",
+        "station": "Station 340",
+        "location": "Kelowna (KEL)",
+        "address": "259 Lawrence Ave, Kelowna, BC V1Y 6L2",
+        "tags": [
+          ""
+        ],
+        "number": 340
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.4977114,
+          49.8851732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 341 (Kelowna - Mills Road)",
+        "station": "Station 341",
+        "location": "Kelowna (KEL)",
+        "address": "#101 - 1515 Keehn Road, Kelowna, BC V1X 5T5",
+        "tags": [
+          ""
+        ],
+        "number": 341
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.4154553,
+          49.8903584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 342 (Peachland)",
+        "station": "Station 342",
+        "location": "Peachland (PEA)",
+        "address": "4479 3rd St, Peachland, BC V0H 1X7",
+        "tags": [
+          ""
+        ],
+        "number": 342
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.7375552,
+          49.7743622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 343 (Lake Country)",
+        "station": "Station 343",
+        "location": "Lake Country (WIF)",
+        "address": "10410 Bottom Wood Lake Road, Lake Country, BC V4V 1T9",
+        "tags": [
+          ""
+        ],
+        "number": 343
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.403202,
+          50.0335631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Annex 344 (Big White)",
+        "station": "Annex 344",
+        "location": "Beaverdell (KEL)",
+        "address": "4900 Lower Snow Pines Rd, Beaverdell, BC V0H 1A0",
+        "tags": [
+          "annex"
+        ],
+        "number": 344
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.9342318,
+          49.7173666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 348 (Williams Lake)",
+        "station": "Station 348",
+        "location": "Williams Lake (WIL)",
+        "address": "300 North Broadway, Williams Lake, BC V2G 2Y7",
+        "tags": [
+          ""
+        ],
+        "number": 348
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1345123,
+          52.1373972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 353 (Alexis Creek)",
+        "station": "Station 353",
+        "location": "Alexis Creek (ALE)",
+        "address": "7613 McAuley Rd, Alexis Creek, BC V0L 1A0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 353
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2705903,
+          52.0845368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 370 (Kamloops CCT)",
+        "station": "Station 370",
+        "location": "Kamloops CCT (KAM)",
+        "address": "2975 Airport Road, Annex A, Kamloops, BC V2B 7W8",
+        "tags": [
+          "cct"
+        ],
+        "number": 370
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.439231,
+          50.7065944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 380 (Kelowna CCT)",
+        "station": "Station 380",
+        "location": "Kelowna CCT (KEL)",
+        "address": "6095 Airport Way, Hangar 3, Kelowna, BC V1V 1S1",
+        "tags": [
+          "cct"
+        ],
+        "number": 380
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.3810784,
+          49.9510301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 385 (Duty Supervisor Group)",
+        "station": "Station 385",
+        "location": "Duty Supervisor Group",
+        "address": "1257 Dalhousie Dr, Kamloops, BC V2C 5Z5",
+        "tags": [
+          "special"
+        ],
+        "number": 385
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.3632064,
+          50.6663568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 399 (Kamloops Dispatch - KDOC)",
+        "station": "Station 399",
+        "location": "Kamloops Dispatch Operations Centre",
+        "address": "1255C Dalhousie Drive,, Kamloops BC, V2C-5Z5",
+        "tags": [
+          "dispatch"
+        ],
+        "number": 399
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.3635806,
+          50.666613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 402 (Castlegar)",
+        "station": "Station 402",
+        "location": "Castlegar (CAS)",
+        "address": "2151 6th Ave South, Castlegar, BC V1N 3B2",
+        "tags": [
+          "cp"
+        ],
+        "number": 402
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.6498095,
+          49.2928776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 403 (Cranbrook)",
+        "station": "Station 403",
+        "location": "Cranbrook (CRA)",
+        "address": "1312 2nd St North, Cranbrook, BC V1C 4T6",
+        "tags": [
+          "cp"
+        ],
+        "number": 403
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.7628446,
+          49.5141573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 404 (Creston)",
+        "station": "Station 404",
+        "location": "Creston (CRE)",
+        "address": "138 - 10th Ave North, Creston, BC V0B 1G0",
+        "tags": [
+          "cp"
+        ],
+        "number": 404
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.5129409,
+          49.0959903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 405 (Elkford)",
+        "station": "Station 405",
+        "location": "Elkford (ELK)",
+        "address": "2300 Balmer Road, Elkford, BC V0B 1H0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 405
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.9242673,
+          50.0065329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 406 (Fernie)",
+        "station": "Station 406",
+        "location": "Fernie (FER)",
+        "address": "1301 - 6th Ave, Fernie, BC V0B 1M0",
+        "tags": [
+          ""
+        ],
+        "number": 406
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.0595522,
+          49.5118344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 407 (Edgewood)",
+        "station": "Station 407",
+        "location": "Edgewood (EDG)",
+        "address": "417 Monashee Ave, Edgewood, BC V0G 1J0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 407
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.1463776,
+          49.7820141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 408 (Grand Forks)",
+        "station": "Station 408",
+        "location": "Grand Forks (GRF)",
+        "address": "7649-A 22nd St, Grand Forks, BC V0H 1H2",
+        "tags": [
+          "cp"
+        ],
+        "number": 408
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.4686204,
+          49.0296852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 409 (Field)",
+        "station": "Station 409",
+        "location": "Field (FIE)",
+        "address": "208C 1st Ave, Field, BC V0A 1G0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 409
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.4864492,
+          51.3962587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 410 (Greenwood)",
+        "station": "Station 410",
+        "location": "Greenwood (GRR)",
+        "address": "201 S. Government St, Greenwood, BC V0H 1J0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 410
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.6764731,
+          49.0901333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 411 (Invermere)",
+        "station": "Station 411",
+        "location": "Invermere (INV)",
+        "address": "1116 - 10th St, Invermere, BC V0A 1K0",
+        "tags": [
+          ""
+        ],
+        "number": 411
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.03421,
+          50.5060215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 412 (Kaslo)",
+        "station": "Station 412",
+        "location": "Kaslo (KAS)",
+        "address": "407 Cross St., Kaslo, BC V0G 1M0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 412
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.912823,
+          49.913376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 413 (Golden)",
+        "station": "Station 413",
+        "location": "Golden (GOL)",
+        "address": "700 8th Ave South, Golden, BC V0A 1H0",
+        "tags": [
+          "cp"
+        ],
+        "number": 413
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.968002,
+          51.2979961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 414 (Kimberley)",
+        "station": "Station 414",
+        "location": "Kimberley (KIM)",
+        "address": "455 Ross St, Kimberley, BC V1A 2C5",
+        "tags": [
+          "cp"
+        ],
+        "number": 414
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.9804919,
+          49.6843313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 415 (Midway)",
+        "station": "Station 415",
+        "location": "Midway (MID)",
+        "address": "661 - 8th Ave, Midway, BC V0H 1M0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 415
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.7781389,
+          49.0086231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 417 (Fruitvale)",
+        "station": "Station 417",
+        "location": "Fruitvale (FRU)",
+        "address": "1919 Main St, Fruitvale, BC V0G 1L0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 417
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.545713,
+          49.11459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 419 (Nakusp)",
+        "station": "Station 419",
+        "location": "Nakusp (NAK)",
+        "address": "300 - 8th Ave NW, Nakusp, BC V0G 1R1",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 419
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.807545,
+          50.242741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 421 (Nelson)",
+        "station": "Station 421",
+        "location": "Nelson (NEL)",
+        "address": "820 Nelson Ave, Nelson, BC V1L 2N9",
+        "tags": [
+          ""
+        ],
+        "number": 421
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.2789186,
+          49.5062292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 422 (New Denver)",
+        "station": "Station 422",
+        "location": "New Denver (NEW)",
+        "address": "401 Galena St, New Denver, BC V0G 1S0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 422
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.3740017,
+          49.9840771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 423 (Riondel)",
+        "station": "Station 423",
+        "location": "Riondel (RIO)",
+        "address": "232 Fowler St, Riondel, BC V0B 2B0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 423
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.8575547,
+          49.7606435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 424 (Rossland)",
+        "station": "Station 424",
+        "location": "Rossland (ROS)",
+        "address": "2471 Columbia Ave, Rossland, BC V0G 1Y0",
+        "tags": [
+          ""
+        ],
+        "number": 424
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.7927645,
+          49.0763836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 426 (Salmo)",
+        "station": "Station 426",
+        "location": "Salmo (SAL)",
+        "address": "414 Baker Ave, Salmo, BC V0G 1Z0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 426
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.2764031,
+          49.1929498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 427 (Winlaw)",
+        "station": "Station 427",
+        "location": "Winlaw (WIN)",
+        "address": "5741 Hwy #6, Winlaw, BC V0G 2J0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 427
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.56318,
+          49.61089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 428 (Sparwood)",
+        "station": "Station 428",
+        "location": "Sparwood (SPA)",
+        "address": "603 Pine Ave, Sparwood, BC V0B 2G0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 428
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.8940603,
+          49.7206252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 431 (Trail)",
+        "station": "Station 431",
+        "location": "Trail (TRA)",
+        "address": "1300 Hospital Road, Trail, BC V1R 4L7",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 431
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.7041723,
+          49.1049299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 503 (Bear Lake)",
+        "station": "Station 503",
+        "location": "Bear Lake (BEA)",
+        "address": "330 Hart Lake Road, Bear Lake, BC V0J 3G0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 503
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6817198,
+          54.4945052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 525 (McBride)",
+        "station": "Station 525",
+        "location": "McBride (MCB)",
+        "address": "640 King St, McBride, BC V0J 2E0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 525
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.1607584,
+          53.3013184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 531 (Prince George - Edmonton)",
+        "station": "Station 531",
+        "location": "Prince George - Edmonton (PRG)",
+        "address": "1488 Edmonton St, Prince George, BC V2M 6Z4",
+        "tags": [
+          ""
+        ],
+        "number": 531
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7631917,
+          53.9106155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 532 (Mackenzie)",
+        "station": "Station 532",
+        "location": "Mackenzie (MAC)",
+        "address": "49 Centennial Drive, Mackenzie, BC V0J 2C0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 532
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0986644,
+          55.3380861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 533 (Valemount)",
+        "station": "Station 533",
+        "location": "Valemount (VAL)",
+        "address": "1450 9th Ave, Valemount, BC V0E 2Z0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 533
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.2736867,
+          52.8288606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 535 (Prince George - Hart Hwy)",
+        "station": "Station 535",
+        "location": "Prince George (PRG)",
+        "address": "2343 Hart Highway, Prince George, BC V2K 1M5",
+        "tags": [
+          ""
+        ],
+        "number": 535
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7631882,
+          53.9458824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 538 (Quesnel)",
+        "station": "Station 538",
+        "location": "Quesnel (QUE)",
+        "address": "574 Carson Ave, Quesnel, BC V2J 2B5",
+        "tags": [
+          ""
+        ],
+        "number": 538
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4911058,
+          52.9757461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 550 (Wells)",
+        "station": "Station 550",
+        "location": "Wells (WEL)",
+        "address": "2509 Hwy 26, Wells, BC V0K 2R0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 550
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.5658656,
+          53.1030071
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 580 (Prince George CCT)",
+        "station": "Station 580",
+        "location": "Prince George CCT (PRG)",
+        "address": "#101 - 4245 Hangar Rd, Prince George, BC V2N 4M6",
+        "tags": [
+          "cct"
+        ],
+        "number": 580
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6757593,
+          53.8829602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 623 (Kitimat)",
+        "station": "Station 623",
+        "location": "Kitimat (KIT)",
+        "address": "1101 Kingfisher Ave, Kitimat, BC V8C 2N4",
+        "tags": [
+          ""
+        ],
+        "number": 623
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.6345813,
+          54.0538039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 643 (Stewart)",
+        "station": "Station 643",
+        "location": "Stewart (STE)",
+        "address": "10 Brightwell St, Stewart, BC V0T 1W0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 643
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.9908974,
+          55.9384759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 645 (Terrace)",
+        "station": "Station 645",
+        "location": "Terrace (TER)",
+        "address": "4804 Hwy 16 West, Terrace, BC V8G 1L6",
+        "tags": [
+          ""
+        ],
+        "number": 645
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.6033973,
+          54.516085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 651 (Port Clements)",
+        "station": "Station 651",
+        "location": "Port Clements (POC)",
+        "address": "12 Park St, Port Clements, BC V0T 1R0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 651
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.1831004,
+          53.6863619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 674 (Kitwanga)",
+        "station": "Station 674",
+        "location": "Kitwanga (KIW)",
+        "address": "1590 Kitwanga North Road, Kitwanga, BC V0J 2A0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 674
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.0241095,
+          55.111623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 679 (Hazelton)",
+        "station": "Station 679",
+        "location": "Hazelton (HAZ)",
+        "address": "10-2500 Hwy 62, Hazelton, BC V0J 1Y0",
+        "tags": [
+          "cp"
+        ],
+        "number": 679
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.5929054,
+          55.2515295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 681 (Sandspit)",
+        "station": "Station 681",
+        "location": "Sandspit (SAN)",
+        "address": "380 School Road, Sandspit, BC V0T 1T0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 681
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.8223868,
+          53.2433413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 684 (Prince Rupert)",
+        "station": "Station 684",
+        "location": "Prince Rupert (PRR)",
+        "address": "1301 Summit Ave, Prince Rupert, BC V8J 4K5",
+        "tags": [
+          "cp"
+        ],
+        "number": 684
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.3316985,
+          54.3055317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 687 (Queen Charlotte City)",
+        "station": "Station 687",
+        "location": "Queen Charlotte City (QCC)",
+        "address": "3211 Wharf St, Queen Charlotte City, BC V0T 1S0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 687
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.0704713,
+          53.2537366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 690 (Masset)",
+        "station": "Station 690",
+        "location": "Masset (MAS)",
+        "address": "1720 Hodges Ave, Masset, BC V0T 1M0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 690
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.1454064,
+          54.0145274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 751 (Atlin)",
+        "station": "Station 751",
+        "location": "Atlin (ATL)",
+        "address": "202 2nd And Pearl St, Atlin, BC V0W 1A0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 751
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.7022253,
+          59.5728586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 753 (Burns Lake)",
+        "station": "Station 753",
+        "location": "Burns Lake (BUR)",
+        "address": "743 Centre St, Burns Lake, BC V0J 1E0",
+        "tags": [
+          "cp"
+        ],
+        "number": 753
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.7622438,
+          54.2357142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 757 (Dease Lake)",
+        "station": "Station 757",
+        "location": "Dease Lake (DEA)",
+        "address": "7171 Hwy 37, Dease Lake, BC V0C 1L0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 757
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.9906513,
+          58.442065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 761 (Fort St. James)",
+        "station": "Station 761",
+        "location": "Fort St. James (FOR)",
+        "address": "400 Manson St., Fort St. James, BC V0J 1P0",
+        "tags": [
+          "cp"
+        ],
+        "number": 761
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.25684,
+          54.4448097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 763 (Fraser Lake)",
+        "station": "Station 763",
+        "location": "Fraser Lake (FRA)",
+        "address": "130 Chow Sunket Rd., Fraser Lake, BC V0J 1S0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 763
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.8499906,
+          54.0534677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 765 (Granisle)",
+        "station": "Station 765",
+        "location": "Granisle (GRA)",
+        "address": "3 Village Square McDonald Ave,, Granisle, BC V0J 1W0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 765
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.2073572,
+          54.8868945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 767 (Houston)",
+        "station": "Station 767",
+        "location": "Houston (HOU)",
+        "address": "3191 - W 14th St, Houston, BC V0J 1Z0",
+        "tags": [
+          "cp"
+        ],
+        "number": 767
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.6535277,
+          54.3968673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 769 (Smithers)",
+        "station": "Station 769",
+        "location": "Smithers (SMI)",
+        "address": "3863 - 3rd Ave, Smithers, BC V0J 2N0",
+        "tags": [
+          "cp"
+        ],
+        "number": 769
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.1709765,
+          54.7814969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 771 (Vanderhoof)",
+        "station": "Station 771",
+        "location": "Vanderhoof (VND)",
+        "address": "148 East Columbia Street, Vanderhoof, BC V0J 3A0",
+        "tags": [
+          "cp"
+        ],
+        "number": 771
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.0078023,
+          54.0166524
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 773 (Grassy Plains)",
+        "station": "Station 773",
+        "location": "Grassy Plains (SOU)",
+        "address": "33860 Keefes Landing Road, Grassy Plains, BC V0J 1E4",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 773
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.8782804,
+          53.9750623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 852 (Chetwynd)",
+        "station": "Station 852",
+        "location": "Chetwynd (CHY)",
+        "address": "5400 North Access Rd, Chetwynd, BC V0C 1J0",
+        "tags": [
+          "cp"
+        ],
+        "number": 852
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6381617,
+          55.6958958
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 856 (Dawson Creek)",
+        "station": "Station 856",
+        "location": "Dawson Creek (DAW)",
+        "address": "10101 13th St, Dawson Creek, BC V1G 4R3",
+        "tags": [
+          "cp"
+        ],
+        "number": 856
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.2379964,
+          55.7612291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 858 (Fort Nelson)",
+        "station": "Station 858",
+        "location": "Fort Nelson (FON)",
+        "address": "5300 Liard Street, Fort Nelson, BC V0C 1R0",
+        "tags": [
+          "cp"
+        ],
+        "number": 858
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.703532,
+          58.8088063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 860 (Fort St. John)",
+        "station": "Station 860",
+        "location": "Fort St. John (FOS)",
+        "address": "10010 96th St, Fort St. John, BC V1J 6Y5",
+        "tags": [
+          "cp",
+          "laat"
+        ],
+        "number": 860
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.8407434,
+          56.2472629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 862 (Hudson's Hope)",
+        "station": "Station 862",
+        "location": "Hudson's Hope (HUD)",
+        "address": "10309 Kyllo St, Hudson's Hope, BC V0C 1V0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 862
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9157544,
+          56.0263906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stn 868 (Tumbler Ridge)",
+        "station": "Station 868",
+        "location": "Tumbler Ridge (TUM)",
+        "address": "220 Front Street, Tumbler Ridge, BC V0C 2W0",
+        "tags": [
+          "cp",
+          "soc"
+        ],
+        "number": 868
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.0000862,
+          55.1245093
+        ]
+      }
+    }
+  ]
+}
