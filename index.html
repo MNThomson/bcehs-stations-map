@@ -413,6 +413,202 @@
             color: var(--accent-blue) !important;
         }
 
+        /* Filter button */
+        .filter-btn {
+            background: linear-gradient(135deg, var(--bg-card), #242b35);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.6rem 1rem;
+            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            background: linear-gradient(135deg, #242b35, #2d3748);
+            border-color: var(--accent-orange);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--accent-orange), #e67e22);
+            border-color: var(--accent-orange);
+            color: #000;
+        }
+
+        .filter-btn.active:hover {
+            background: linear-gradient(135deg, #e67e22, var(--accent-orange));
+        }
+
+        .filter-icon {
+            font-size: 1rem;
+        }
+
+        /* Modal overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 550px;
+            max-height: 80vh;
+            overflow: hidden;
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-overlay.visible .modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-header h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-body p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .email-textarea {
+            width: 100%;
+            height: 200px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            color: var(--text-primary);
+            font-family: 'DM Sans', monospace;
+            font-size: 0.85rem;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+
+        .email-textarea:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+        }
+
+        .email-textarea::placeholder {
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        .modal-footer {
+            padding: 1rem 1.5rem 1.5rem;
+            display: flex;
+            gap: 0.75rem;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .modal-btn.secondary {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .modal-btn.secondary:hover {
+            border-color: var(--text-secondary);
+            color: var(--text-primary);
+        }
+
+        .modal-btn.primary {
+            background: linear-gradient(135deg, var(--accent-orange), #e67e22);
+            border: none;
+            color: #000;
+        }
+
+        .modal-btn.primary:hover {
+            background: linear-gradient(135deg, #e67e22, var(--accent-orange));
+        }
+
+        /* Muted marker styles */
+        .marker-pin.muted {
+            background: #3a3f47 !important;
+            opacity: 0.4 !important;
+        }
+
+        /* Filter active indicator */
+        .filter-count {
+            background: var(--accent-red);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -452,7 +648,37 @@
                 <div class="stat-label">Regions</div>
             </div>
         </div>
+        <button class="filter-btn" id="filterBtn" onclick="toggleFilterModal()">
+            <span class="filter-icon">📋</span>
+            <span id="filterBtnText">Filter by Email</span>
+        </button>
     </header>
+
+    <!-- Filter Modal -->
+    <div class="modal-overlay" id="filterModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>📋 Paste Station Email</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Paste the contents of the monthly station availability email below. The map will highlight only the stations listed in the email.</p>
+                <textarea class="email-textarea" id="emailContent" placeholder="Paste email content here...
+
+Example:
+ALERT BAY - 102 Remote
+50%
+
+MACKENZIE - 532 Remote
+75%
+..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary" onclick="closeModal()">Cancel</button>
+                <button class="modal-btn primary" onclick="applyFilter()">Apply Filter</button>
+            </div>
+        </div>
+    </div>
 
     <div id="map"></div>
 
@@ -488,6 +714,77 @@
             "features": []
         };
 
+        // Filter state
+        let isFilterActive = false;
+        let filteredStationNumbers = new Set();
+        let map = null;
+        let markersLayer = null;
+
+        // Modal functions
+        function toggleFilterModal() {
+            if (isFilterActive) {
+                clearFilter();
+            } else {
+                openModal();
+            }
+        }
+
+        function openModal() {
+            document.getElementById('filterModal').classList.add('visible');
+            document.getElementById('emailContent').focus();
+        }
+
+        function closeModal() {
+            document.getElementById('filterModal').classList.remove('visible');
+            document.getElementById('emailContent').value = '';
+        }
+
+        function parseEmailForStations(emailText) {
+            const stationNumbers = new Set();
+            // Match patterns like "STATION NAME - 123 Type" or "station name - 123 type"
+            const regex = /[\w\s'\.]+\s*-\s*(\d+)\s+(?:Urban|Rural|Remote)/gi;
+            let match;
+            while ((match = regex.exec(emailText)) !== null) {
+                stationNumbers.add(parseInt(match[1], 10));
+            }
+            return stationNumbers;
+        }
+
+        function applyFilter() {
+            const emailText = document.getElementById('emailContent').value;
+            filteredStationNumbers = parseEmailForStations(emailText);
+
+            if (filteredStationNumbers.size === 0) {
+                alert('No stations found in the pasted content. Make sure the email contains entries like "STATION NAME - 123 Remote"');
+                return;
+            }
+
+            isFilterActive = true;
+            closeModal();
+            updateFilterButton();
+            refreshMarkers();
+        }
+
+        function clearFilter() {
+            isFilterActive = false;
+            filteredStationNumbers.clear();
+            updateFilterButton();
+            refreshMarkers();
+        }
+
+        function updateFilterButton() {
+            const btn = document.getElementById('filterBtn');
+            const btnText = document.getElementById('filterBtnText');
+
+            if (isFilterActive) {
+                btn.classList.add('active');
+                btnText.innerHTML = `Clear Filter <span class="filter-count">${filteredStationNumbers.size}</span>`;
+            } else {
+                btn.classList.remove('active');
+                btnText.textContent = 'Filter by Email';
+            }
+        }
+
         // Load GeoJSON data
         fetch('stations.geojson')
             .then(response => response.json())
@@ -504,7 +801,7 @@
             document.getElementById('total-stations').textContent = stationsData.features.length;
 
             // Initialize map centered on BC
-            const map = L.map('map', {
+            map = L.map('map', {
                 zoomControl: true
             }).setView([53.7267, -127.6476], 5);
 
@@ -515,122 +812,80 @@
                 maxZoom: 19
             }).addTo(map);
 
-            // Get marker type based on tags
-            function getMarkerType(tags) {
-                if (tags.includes('cct')) return 'cct';
-                if (tags.includes('dispatch')) return 'dispatch';
-                if (tags.includes('special') || tags.includes('crs')) return 'special';
-                if (tags.includes('annex')) return 'annex';
-                return 'station';
-            }
+            // Create markers layer
+            markersLayer = L.layerGroup().addTo(map);
 
-            // Check if a station is "basic" (no special designations)
-            function isBasicStation(tags) {
-                const specialTags = ['cct', 'dispatch', 'special', 'crs', 'annex'];
-                const filteredTags = tags.filter(t => t && t.trim() !== '');
-                return !filteredTags.some(t => specialTags.includes(t));
-            }
+            // Add markers
+            addMarkersToMap();
 
-            // Create custom icon
-            function createCustomIcon(type, colocatedCount = 0) {
-                const badgeHtml = colocatedCount > 0
-                    ? `<div class="marker-badge">+${colocatedCount}</div>`
-                    : '';
+            // Fit bounds to show all markers
+            fitMapBounds();
+        }
 
-                return L.divIcon({
-                    className: 'custom-marker',
-                    html: `<div class="custom-marker-wrapper"><div class="marker-pin ${type}"><div class="marker-inner"></div></div>${badgeHtml}</div>`,
-                    iconSize: [24, 24],
-                    iconAnchor: [12, 24],
-                    popupAnchor: [0, -24]
-                });
-            }
+        // Get marker type based on tags
+        function getMarkerType(tags) {
+            if (tags.includes('cct')) return 'cct';
+            if (tags.includes('dispatch')) return 'dispatch';
+            if (tags.includes('special') || tags.includes('crs')) return 'special';
+            if (tags.includes('annex')) return 'annex';
+            return 'station';
+        }
 
-            const tagLabels = {
-                'cp': 'Community Paramedic',
-                'soc': 'Scheduled On-Call',
-                'annex': 'Annex',
-                'dispatch': 'Dispatch',
-                'special': 'Special Ops',
-                'cct': 'Critical Care',
-                'crs': 'Central Reporting',
-                'laat': 'LAAT'
-            };
+        // Check if a station is "basic" (no special designations)
+        function isBasicStation(tags) {
+            const specialTags = ['cct', 'dispatch', 'special', 'crs', 'annex'];
+            const filteredTags = tags.filter(t => t && t.trim() !== '');
+            return !filteredTags.some(t => specialTags.includes(t));
+        }
 
-            // Create popup content for a single station
-            function createSingleStationPopup(props) {
-                const markerType = getMarkerType(props.tags || []);
-                const tags = (props.tags || []).filter(t => t && t.trim() !== '');
+        // Create custom icon
+        function createCustomIcon(type, colocatedCount = 0, isMuted = false) {
+            const badgeHtml = colocatedCount > 0
+                ? `<div class="marker-badge">+${colocatedCount}</div>`
+                : '';
 
-                const tagsHtml = tags.map(tag => 
-                    `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
-                ).join('');
+            const mutedClass = isMuted ? ' muted' : '';
 
-                return `
-                    <div class="popup-content">
-                        <div class="popup-header">
-                            <div class="popup-icon ${markerType}">🚑</div>
-                            <div>
-                                <div class="popup-title">${props.title || props.station}</div>
-                                <div class="popup-location">${props.location || ''}</div>
-                            </div>
-                        </div>
-                        <div class="popup-address">${props.address || 'Address not available'}</div>
-                        ${tagsHtml ? `<div class="popup-tags">${tagsHtml}</div>` : ''}
-                    </div>
-                `;
-            }
+            return L.divIcon({
+                className: 'custom-marker',
+                html: `<div class="custom-marker-wrapper"><div class="marker-pin ${type}${mutedClass}"><div class="marker-inner"></div></div>${badgeHtml}</div>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 24],
+                popupAnchor: [0, -24]
+            });
+        }
 
-            // Create popup content for co-located stations
-            function createColocatedPopup(primaryStation, colocatedStations) {
-                const primaryProps = primaryStation.properties;
-                const primaryMarkerType = getMarkerType(primaryProps.tags || []);
-                const primaryTags = (primaryProps.tags || []).filter(t => t && t.trim() !== '');
+        // Check if a station should be highlighted
+        function isStationHighlighted(stationNumber) {
+            if (!isFilterActive) return true;
+            return filteredStationNumbers.has(stationNumber);
+        }
 
-                const primaryTagsHtml = primaryTags.map(tag =>
-                    `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
-                ).join('');
+        // Check if any station in a group is highlighted
+        function isGroupHighlighted(stations) {
+            if (!isFilterActive) return true;
+            return stations.some(s => filteredStationNumbers.has(s.properties.number));
+        }
 
-                // Build co-located groups HTML
-                const colocatedHtml = colocatedStations.map(station => {
-                    const props = station.properties;
-                    const type = getMarkerType(props.tags || []);
-                    const tags = (props.tags || []).filter(t => t && t.trim() !== '');
-                    const tagsHtml = tags.map(tag =>
-                        `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
-                    ).join('');
+        // Refresh markers with current filter state
+        function refreshMarkers() {
+            markersLayer.clearLayers();
+            addMarkersToMap();
+        }
 
-                    return `
-                        <div class="colocated-group">
-                            <div class="colocated-group-header">
-                                <div class="colocated-icon ${type}">🚑</div>
-                                <div class="colocated-name">${props.title || props.station}</div>
-                            </div>
-                            ${tagsHtml ? `<div class="colocated-tags">${tagsHtml}</div>` : ''}
-                        </div>
-                    `;
-                }).join('');
+        // Fit map to marker bounds
+        function fitMapBounds() {
+            const locationGroups = groupStationsByLocation();
+            const uniqueCoords = Object.keys(locationGroups).map(key => {
+                const [lng, lat] = key.split(',').map(Number);
+                return L.marker([lat, lng]);
+            });
+            const group = L.featureGroup(uniqueCoords);
+            map.fitBounds(group.getBounds().pad(0.1));
+        }
 
-                return `
-                    <div class="popup-content">
-                        <div class="popup-header">
-                            <div class="popup-icon ${primaryMarkerType}">🚑</div>
-                            <div>
-                                <div class="popup-title">${primaryProps.title || primaryProps.station}</div>
-                                <div class="popup-location">${primaryProps.location || ''}</div>
-                            </div>
-                        </div>
-                        <div class="popup-address">${primaryProps.address || 'Address not available'}</div>
-                        ${primaryTagsHtml ? `<div class="popup-tags">${primaryTagsHtml}</div>` : ''}
-                        <div class="colocated-section">
-                            <div class="colocated-title">Also at this location</div>
-                            ${colocatedHtml}
-                        </div>
-                    </div>
-                `;
-            }
-
-            // Group stations by coordinates
+        // Group stations by coordinates
+        function groupStationsByLocation() {
             const locationGroups = {};
             stationsData.features.forEach(feature => {
                 const coordKey = feature.geometry.coordinates.join(',');
@@ -639,6 +894,96 @@
                 }
                 locationGroups[coordKey].push(feature);
             });
+            return locationGroups;
+        }
+
+        const tagLabels = {
+            'cp': 'Community Paramedic',
+            'soc': 'Scheduled On-Call',
+            'annex': 'Annex',
+            'dispatch': 'Dispatch',
+            'special': 'Special Ops',
+            'cct': 'Critical Care',
+            'crs': 'Central Reporting',
+            'laat': 'LAAT'
+        };
+
+        // Create popup content for a single station
+        function createSingleStationPopup(props) {
+            const markerType = getMarkerType(props.tags || []);
+            const tags = (props.tags || []).filter(t => t && t.trim() !== '');
+
+            const tagsHtml = tags.map(tag =>
+                `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
+            ).join('');
+
+            return `
+                <div class="popup-content">
+                    <div class="popup-header">
+                        <div class="popup-icon ${markerType}">🚑</div>
+                        <div>
+                            <div class="popup-title">${props.title || props.station}</div>
+                            <div class="popup-location">${props.location || ''}</div>
+                        </div>
+                    </div>
+                    <div class="popup-address">${props.address || 'Address not available'}</div>
+                    ${tagsHtml ? `<div class="popup-tags">${tagsHtml}</div>` : ''}
+                </div>
+            `;
+        }
+
+        // Create popup content for co-located stations
+        function createColocatedPopup(primaryStation, colocatedStations) {
+            const primaryProps = primaryStation.properties;
+            const primaryMarkerType = getMarkerType(primaryProps.tags || []);
+            const primaryTags = (primaryProps.tags || []).filter(t => t && t.trim() !== '');
+
+            const primaryTagsHtml = primaryTags.map(tag =>
+                `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
+            ).join('');
+
+            // Build co-located groups HTML
+            const colocatedHtml = colocatedStations.map(station => {
+                const props = station.properties;
+                const type = getMarkerType(props.tags || []);
+                const tags = (props.tags || []).filter(t => t && t.trim() !== '');
+                const tagsHtml = tags.map(tag =>
+                    `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
+                ).join('');
+
+                return `
+                    <div class="colocated-group">
+                        <div class="colocated-group-header">
+                            <div class="colocated-icon ${type}">🚑</div>
+                            <div class="colocated-name">${props.title || props.station}</div>
+                        </div>
+                        ${tagsHtml ? `<div class="colocated-tags">${tagsHtml}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            return `
+                <div class="popup-content">
+                    <div class="popup-header">
+                        <div class="popup-icon ${primaryMarkerType}">🚑</div>
+                        <div>
+                            <div class="popup-title">${primaryProps.title || primaryProps.station}</div>
+                            <div class="popup-location">${primaryProps.location || ''}</div>
+                        </div>
+                    </div>
+                    <div class="popup-address">${primaryProps.address || 'Address not available'}</div>
+                    ${primaryTagsHtml ? `<div class="popup-tags">${primaryTagsHtml}</div>` : ''}
+                    <div class="colocated-section">
+                        <div class="colocated-title">Also at this location</div>
+                        ${colocatedHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Add markers to the map
+        function addMarkersToMap() {
+            const locationGroups = groupStationsByLocation();
 
             // Add markers for each unique location
             Object.values(locationGroups).forEach(stations => {
@@ -648,10 +993,11 @@
                     const coords = feature.geometry.coordinates;
                     const props = feature.properties;
                     const markerType = getMarkerType(props.tags || []);
+                    const isMuted = !isStationHighlighted(props.number);
 
                     const marker = L.marker([coords[1], coords[0]], {
-                        icon: createCustomIcon(markerType)
-                    }).addTo(map);
+                        icon: createCustomIcon(markerType, 0, isMuted)
+                    }).addTo(markersLayer);
 
                     marker.bindPopup(createSingleStationPopup(props), {
                         maxWidth: 320,
@@ -672,10 +1018,11 @@
                     const colocatedStations = sorted.slice(1);
                     const coords = primaryStation.geometry.coordinates;
                     const markerType = getMarkerType(primaryStation.properties.tags || []);
+                    const isMuted = !isGroupHighlighted(stations);
 
                     const marker = L.marker([coords[1], coords[0]], {
-                        icon: createCustomIcon(markerType, colocatedStations.length)
-                    }).addTo(map);
+                        icon: createCustomIcon(markerType, colocatedStations.length, isMuted)
+                    }).addTo(markersLayer);
 
                     marker.bindPopup(createColocatedPopup(primaryStation, colocatedStations), {
                         maxWidth: 320,
@@ -683,14 +1030,6 @@
                     });
                 }
             });
-
-            // Fit bounds to show all markers
-            const uniqueCoords = Object.keys(locationGroups).map(key => {
-                const [lng, lat] = key.split(',').map(Number);
-                return L.marker([lat, lng]);
-            });
-            const group = L.featureGroup(uniqueCoords);
-            map.fitBounds(group.getBounds().pad(0.1));
         }
     </script>
 </body>
