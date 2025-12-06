@@ -162,7 +162,7 @@
         .popup-icon.station { background: linear-gradient(135deg, #004a8d, #003366); }
         .popup-icon.annex { background: linear-gradient(135deg, #6b7280, #4b5563); }
         .popup-icon.dispatch { background: linear-gradient(135deg, #22c55e, #16a34a); }
-        .popup-icon.special { background: linear-gradient(135deg, #ec1c24, #c41e3a); }
+        .popup-icon.special { background: linear-gradient(135deg, #ffd000, #ffdd00); }
         .popup-icon.cct { background: linear-gradient(135deg, #ec1c24, #c41e3a); }
 
         .popup-title {
@@ -257,7 +257,7 @@
         .colocated-icon.station { background: linear-gradient(135deg, #004a8d, #003366); }
         .colocated-icon.annex { background: linear-gradient(135deg, #6b7280, #4b5563); }
         .colocated-icon.dispatch { background: linear-gradient(135deg, #22c55e, #16a34a); }
-        .colocated-icon.special { background: linear-gradient(135deg, #ec1c24, #c41e3a); }
+        .colocated-icon.special { background: linear-gradient(135deg, #ffd000, #ffdd00); }
         .colocated-icon.cct { background: linear-gradient(135deg, #ec1c24, #c41e3a); }
 
         .colocated-name {
@@ -340,7 +340,7 @@
         .legend-marker.station { background: #004a8d; }
         .legend-marker.annex { background: #6b7280; }
         .legend-marker.dispatch { background: #22c55e; }
-        .legend-marker.special { background: #ec1c24; }
+        .legend-marker.special { background: #ffd000; }
         .legend-marker.cct { background: #ec1c24; }
 
         /* Custom marker styles */
@@ -365,7 +365,7 @@
         .marker-pin.station { background: #004a8d; }
         .marker-pin.annex { background: #6b7280; opacity: 0.7; }
         .marker-pin.dispatch { background: #22c55e; }
-        .marker-pin.special { background: #ec1c24; }
+        .marker-pin.special { background: #ffd000; }
         .marker-pin.cct { background: #ec1c24; }
 
         .marker-inner {
@@ -908,6 +908,17 @@ MACKENZIE - 532 Remote
             'laat': 'LAAT'
         };
 
+        // Get emoji for station type
+        function getStationEmoji(markerType) {
+            switch (markerType) {
+                case 'cct': return '🚁';      // Critical Care Transport - helicopter
+                case 'dispatch': return '📡'; // Dispatch - satellite
+                case 'annex': return '🏚️';    // Annex - decrepit building
+                case 'special': return '🚑';  // Special Ops
+                default: return '🚑';         // Regular station
+            }
+        }
+
         // Create popup content for a single station
         function createSingleStationPopup(props) {
             const markerType = getMarkerType(props.tags || []);
@@ -920,7 +931,7 @@ MACKENZIE - 532 Remote
             return `
                 <div class="popup-content">
                     <div class="popup-header">
-                        <div class="popup-icon ${markerType}">🚑</div>
+                        <div class="popup-icon ${markerType}">${getStationEmoji(markerType)}</div>
                         <div>
                             <div class="popup-title">${props.title || props.station}</div>
                             <div class="popup-location">${props.location || ''}</div>
@@ -954,7 +965,7 @@ MACKENZIE - 532 Remote
                 return `
                     <div class="colocated-group">
                         <div class="colocated-group-header">
-                            <div class="colocated-icon ${type}">🚑</div>
+                            <div class="colocated-icon ${type}">${getStationEmoji(type)}</div>
                             <div class="colocated-name">${props.title || props.station}</div>
                         </div>
                         ${tagsHtml ? `<div class="colocated-tags">${tagsHtml}</div>` : ''}
@@ -965,7 +976,7 @@ MACKENZIE - 532 Remote
             return `
                 <div class="popup-content">
                     <div class="popup-header">
-                        <div class="popup-icon ${primaryMarkerType}">🚑</div>
+                        <div class="popup-icon ${primaryMarkerType}">${getStationEmoji(primaryMarkerType)}</div>
                         <div>
                             <div class="popup-title">${primaryProps.title || primaryProps.station}</div>
                             <div class="popup-location">${primaryProps.location || ''}</div>
