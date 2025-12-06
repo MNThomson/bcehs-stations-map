@@ -1039,12 +1039,23 @@ MACKENZIE - 532 Remote
                     });
                 } else {
                     // Multiple stations at this location
-                    // Sort: basic stations first, then by station number
+                    // Sort by priority: dispatch > cct > crs > no tags > lower station number
+                    const getPriority = (tags) => {
+                        if (tags.includes('dispatch')) return 0;
+                        if (tags.includes('cct')) return 1;
+                        if (tags.includes('crs')) return 2;
+                        // Check if station has no special tags (basic station)
+                        if (isBasicStation(tags)) return 3;
+                        // Other special tags (annex, special, etc.) come after basic
+                        return 4;
+                    };
+
                     const sorted = [...stations].sort((a, b) => {
-                        const aBasic = isBasicStation(a.properties.tags || []);
-                        const bBasic = isBasicStation(b.properties.tags || []);
-                        if (aBasic && !bBasic) return -1;
-                        if (!aBasic && bBasic) return 1;
+                        const aTags = a.properties.tags || [];
+                        const bTags = b.properties.tags || [];
+                        const aPriority = getPriority(aTags);
+                        const bPriority = getPriority(bTags);
+                        if (aPriority !== bPriority) return aPriority - bPriority;
                         return (a.properties.number || 999) - (b.properties.number || 999);
                     });
 
