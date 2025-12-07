@@ -163,7 +163,7 @@
 
         .leaflet-popup-content {
             margin: 0;
-            min-width: 280px;
+            min-width: 300px;
         }
 
         .leaflet-popup-tip {
@@ -245,6 +245,151 @@
         .tag-cct { background: rgba(39, 174, 96, 0.2); color: #58d68d; }
         .tag-crs { background: rgba(241, 196, 15, 0.2); color: #f7dc6f; }
         .tag-laat { background: rgba(52, 152, 219, 0.2); color: #5dade2; }
+
+        /* Wait times section */
+        .wait-times-section {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .wait-times-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.6rem;
+        }
+
+        .wait-times-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .wait-times-total {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+
+        .wait-times-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        .wait-time-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .wait-time-item.priority-red {
+            border-left: 3px solid #e63946;
+        }
+
+        .wait-time-item.priority-orange {
+            border-left: 3px solid #f4a261;
+        }
+
+        .wait-time-item.priority-yellow {
+            border-left: 3px solid #f1c40f;
+        }
+
+        .priority-label {
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        .priority-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .event-count {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .response-time {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+
+        /* Year selector dropdown */
+        .year-selector {
+            position: relative;
+        }
+
+        .year-select {
+            appearance: none;
+            -webkit-appearance: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.3rem 1.8rem 0.3rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-orange);
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            transition: all 0.15s ease;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23f4a261' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+        }
+
+        .year-select:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-orange);
+        }
+
+        .year-select:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 2px rgba(244, 162, 97, 0.2);
+        }
+
+        .year-select option {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            padding: 0.5rem;
+        }
+
+        .wait-times-total-row {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Aggregate data notice */
+        .aggregate-notice {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(69, 123, 157, 0.15);
+            border: 1px solid rgba(69, 123, 157, 0.3);
+            border-radius: 6px;
+            padding: 0.4rem 0.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .aggregate-icon {
+            font-size: 0.8rem;
+        }
+
+        .aggregate-text {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            line-height: 1.3;
+        }
+
+        .aggregate-text strong {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
 
         /* Co-located groups section */
         .colocated-section {
@@ -708,6 +853,10 @@
                 <div class="stat-value" id="total-stations">-</div>
                 <div class="stat-label">Stations</div>
             </div>
+            <div class="stat-item">
+                <div class="stat-value" id="total-calls">-</div>
+                <div class="stat-label">Total Responses</div>
+            </div>
         </div>
         <button class="filter-btn" id="filterBtn" onclick="toggleFilterModal()">
             <span class="filter-icon">📋</span>
@@ -723,7 +872,7 @@
                 <button class="modal-close" onclick="closeModal()">&times;</button>
             </div>
             <div class="modal-body">
-                <p>Paste the contents of the monthly station availability email below. The map will highlight only the stations listed in the email.</p>
+                <p>Paste the contents of the monthly station availability email below. The map will highlight only the stations listed in the email. No need to clean up the formatting—just paste the raw email text.</p>
                 <textarea class="email-textarea" id="emailContent" placeholder="Paste email content here...
 
 Example:
@@ -775,11 +924,209 @@ MACKENZIE - 532 Remote
             "features": []
         };
 
+        // Wait times data indexed by normalized community name
+        let waitTimesData = {};
+
         // Filter state
         let isFilterActive = false;
         let filteredStationNumbers = new Set();
         let map = null;
         let markersLayer = null;
+
+        // Normalize community name for matching
+        function normalizeCommunity(name) {
+            return name.toLowerCase()
+                .replace(/\./g, '')
+                .replace(/'/g, '')
+                .replace(/[\u00a0]/g, ' ')  // Replace non-breaking spaces
+                .replace(/\s*-\s*/g, ' ')   // Replace dash with optional surrounding spaces
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        // Manual mappings: Station location → CSV community name
+        // Maps station names to wait time data communities
+        const stationToCommunityMap = {
+            // Large cities - multiple stations map to single city data
+            'kamloops north': 'kamloops',
+            'kamloops south': 'kamloops',
+            'kamloops cct': 'kamloops',
+            'kamloops dispatch operations centre': 'kamloops',
+            'nanaimo south': 'nanaimo',
+            'nanaimo north': 'nanaimo',
+            'richmond south': 'richmond',
+            'richmond north': 'richmond',
+            'delta north': 'delta',
+            'ladner': 'delta',
+            'surrey cloverdale': 'surrey',
+            'langley north': 'langley',
+            
+            // Victoria area stations
+            'victoria esquimalt': 'victoria',
+            'victoria royal oak': 'victoria',
+            'victoria fairfield': 'victoria',
+            'victoria central reporting station': 'victoria',
+            'shelbourne': 'saanich',
+            
+            // Vancouver area stations
+            'cambie st': 'vancouver',
+            'arbutus and 13th': 'vancouver',
+            'downtown east side': 'vancouver',
+            'east king edward': 'vancouver',
+            'west 7th': 'vancouver',
+            'ubc': 'vancouver',
+            'yvr airport bike squad': 'vancouver',
+            'st pauls hospital': 'vancouver',
+            'special operations': 'vancouver',
+            'paramedic specialists': 'vancouver',
+            'vancouver dispatch': 'vancouver',
+            
+            // Surrey area
+            'surrey memorial hospital': 'surrey',
+            
+            // Spelling variants / aliases
+            'kitwanga': 'gitwangak',
+            'quadra island': 'quathiaski cove',
+            'pender island': 'north pender island',
+            
+            // Prince George area
+            'prince george edmonton': 'prince george',
+            
+            // Fort St. James spelling
+            'fort st james': 'fort st james',
+            
+            // Neighborhoods to nearby communities
+            'abbotsford mt lehman': 'abbotsford',
+            'lions bay': 'west vancouver',
+        };
+
+        // Extract community name from station location field
+        function extractCommunity(location) {
+            if (!location) return '';
+            // Remove parenthetical codes like "(ALB)" from "Alert Bay (ALB)"
+            const match = location.match(/^([^(]+)/);
+            return match ? match[1].trim() : location.trim();
+        }
+
+        // Get the CSV community key for a station location
+        function getCommunityKey(location) {
+            const extracted = extractCommunity(location);
+            const normalized = normalizeCommunity(extracted);
+            
+            // Check manual mapping first
+            if (stationToCommunityMap[normalized]) {
+                return stationToCommunityMap[normalized];
+            }
+            
+            return normalized;
+        }
+
+        // Check if station uses aggregate/mapped data (not exact match)
+        function isAggregateData(location) {
+            const extracted = extractCommunity(location);
+            const normalized = normalizeCommunity(extracted);
+            return stationToCommunityMap.hasOwnProperty(normalized);
+        }
+
+        // Get display name for the data source region
+        function getDataSourceName(location) {
+            const communityKey = getCommunityKey(location);
+            // Look up the original community name from the data
+            const data = waitTimesData[communityKey];
+            if (data && data.community) {
+                return data.community;
+            }
+            // Fallback: capitalize the key
+            return communityKey.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        }
+
+        // Parse CSV text into array of objects
+        function parseCSV(csvText) {
+            const lines = csvText.trim().split('\n');
+            const headers = lines[0].split(',');
+            const data = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = [];
+                let current = '';
+                let inQuotes = false;
+                
+                for (const char of lines[i]) {
+                    if (char === '"') {
+                        inQuotes = !inQuotes;
+                    } else if (char === ',' && !inQuotes) {
+                        values.push(current.trim());
+                        current = '';
+                    } else {
+                        current += char;
+                    }
+                }
+                values.push(current.trim());
+                
+                const row = {};
+                headers.forEach((header, idx) => {
+                    row[header.trim()] = values[idx] || '';
+                });
+                data.push(row);
+            }
+            return data;
+        }
+
+        // Parse number that may have comma separators
+        function parseNumber(str) {
+            if (!str) return 0;
+            return parseInt(str.replace(/,/g, ''), 10) || 0;
+        }
+
+        // Index wait times by normalized community name (all years per community)
+        function indexWaitTimes(csvData) {
+            const indexed = {};
+            
+            csvData.forEach(row => {
+                const community = normalizeCommunity(row.community);
+                const year = parseInt(row.year, 10);
+                
+                if (!indexed[community]) {
+                    indexed[community] = {
+                        community: row.community,
+                        years: {}
+                    };
+                }
+                
+                indexed[community].years[year] = {
+                    year: year,
+                    eventsTotal: parseNumber(row['events-total']),
+                    eventsRedPurple: parseNumber(row['events-red_purple']),
+                    eventsOrange: parseNumber(row['events-orange']),
+                    eventsYellow: parseNumber(row['events-yellow']),
+                    medianRedPurple: parseNumber(row['media-seconds-red_purple']),
+                    medianOrange: parseNumber(row['median-seconds-orange']),
+                    medianYellow: parseNumber(row['median-seconds-yellow'])
+                };
+            });
+            
+            return indexed;
+        }
+
+        // Get wait time data for a station (all years)
+        function getWaitTimeForStation(location) {
+            const communityKey = getCommunityKey(location);
+            return waitTimesData[communityKey] || null;
+        }
+
+        // Get available years for a community (sorted descending)
+        function getAvailableYears(communityData) {
+            if (!communityData || !communityData.years) return [];
+            return Object.keys(communityData.years)
+                .map(y => parseInt(y, 10))
+                .sort((a, b) => b - a);
+        }
+
+        // Get most recent year for a community
+        function getMostRecentYear(communityData) {
+            const years = getAvailableYears(communityData);
+            return years.length > 0 ? years[0] : null;
+        }
 
         // Modal functions
         function toggleFilterModal() {
@@ -846,20 +1193,32 @@ MACKENZIE - 532 Remote
             }
         }
 
-        // Load GeoJSON data
-        fetch('stations.geojson')
-            .then(response => response.json())
-            .then(data => {
-                stationsData.features = data.features;
+        // Load both GeoJSON and CSV data
+        Promise.all([
+            fetch('stations.geojson').then(r => r.json()),
+            fetch('https://raw.githubusercontent.com/vs-postmedia/bcehs-wait-times/f371f04cbe42f1738d7886ad6ca23aceb210e5d9/data/bcehs-wait-times.csv').then(r => r.text())
+        ])
+            .then(([geoData, csvText]) => {
+                stationsData.features = geoData.features;
+                const csvData = parseCSV(csvText);
+                waitTimesData = indexWaitTimes(csvData);
+                console.log(`Loaded ${Object.keys(waitTimesData).length} communities with wait time data`);
                 initMap();
             })
             .catch(error => {
-                console.error('Error loading GeoJSON:', error);
+                console.error('Error loading data:', error);
             });
 
         function initMap() {
             // Update stats
             document.getElementById('total-stations').textContent = stationsData.features.length;
+            
+            // Calculate total calls from 2024 across all communities
+            const totalCalls2024 = Object.values(waitTimesData).reduce((sum, community) => {
+                const year2024 = community.years[2024];
+                return sum + (year2024 ? year2024.eventsTotal : 0);
+            }, 0);
+            document.getElementById('total-calls').textContent = totalCalls2024.toLocaleString();
 
             // Initialize map centered on BC
             map = L.map('map', {
@@ -980,10 +1339,130 @@ MACKENZIE - 532 Remote
             }
         }
 
+        // Format seconds as human-readable time
+        function formatResponseTime(seconds) {
+            if (!seconds || seconds === 0) return '-';
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            if (mins === 0) return `${secs}s`;
+            return secs > 0 ? `${mins}m ${secs}s` : `${mins}m`;
+        }
+
+        // Format large numbers with commas
+        function formatNumber(num) {
+            if (!num) return '0';
+            return num.toLocaleString();
+        }
+
+        // Generate unique ID for popup elements
+        let popupIdCounter = 0;
+        function generatePopupId() {
+            return `popup-${++popupIdCounter}`;
+        }
+
+        // Create wait times HTML section with year selector
+        function createWaitTimesHtml(communityData, popupId, stationLocation) {
+            if (!communityData || !communityData.years) return '';
+            
+            const years = getAvailableYears(communityData);
+            if (years.length === 0) return '';
+            
+            const mostRecentYear = years[0];
+            const waitData = communityData.years[mostRecentYear];
+            // Use the mapped community key for data lookups
+            const communityKey = getCommunityKey(stationLocation);
+            
+            // Check if this is aggregate data for a region
+            const isAggregate = isAggregateData(stationLocation);
+            const regionName = isAggregate ? getDataSourceName(stationLocation) : null;
+            
+            // Create year selector dropdown
+            const yearOptionsHtml = years.map(year => 
+                `<option value="${year}"${year === mostRecentYear ? ' selected' : ''}>${year}</option>`
+            ).join('');
+            
+            // Aggregate data notice
+            const aggregateNotice = isAggregate 
+                ? `<div class="aggregate-notice">
+                       <span class="aggregate-icon">📍</span>
+                       <span class="aggregate-text">Showing data for <strong>${regionName}</strong> region</span>
+                   </div>`
+                : '';
+            
+            return `
+                <div class="wait-times-section" id="${popupId}">
+                    <div class="wait-times-header">
+                        <span class="wait-times-title">📊 Response Data</span>
+                        <div class="year-selector">
+                            <select class="year-select" onchange="switchYear('${popupId}', '${communityKey}', parseInt(this.value))">
+                                ${yearOptionsHtml}
+                            </select>
+                        </div>
+                    </div>
+                    ${aggregateNotice}
+                    <div class="wait-times-total-row">
+                        <span class="wait-times-total" id="${popupId}-total">${formatNumber(waitData.eventsTotal)} calls</span>
+                    </div>
+                    <div class="wait-times-grid" id="${popupId}-grid">
+                        ${createWaitTimesGridHtml(waitData)}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Create just the grid content (for updating)
+        function createWaitTimesGridHtml(waitData) {
+            return `
+                <div class="wait-time-item priority-red">
+                    <div class="priority-label">🔴 Critical</div>
+                    <div class="priority-stats">
+                        <span class="event-count">${formatNumber(waitData.eventsRedPurple)}</span>
+                        <span class="response-time">${formatResponseTime(waitData.medianRedPurple)}</span>
+                    </div>
+                </div>
+                <div class="wait-time-item priority-orange">
+                    <div class="priority-label">🟠 High</div>
+                    <div class="priority-stats">
+                        <span class="event-count">${formatNumber(waitData.eventsOrange)}</span>
+                        <span class="response-time">${formatResponseTime(waitData.medianOrange)}</span>
+                    </div>
+                </div>
+                <div class="wait-time-item priority-yellow">
+                    <div class="priority-label">🟡 Medium</div>
+                    <div class="priority-stats">
+                        <span class="event-count">${formatNumber(waitData.eventsYellow)}</span>
+                        <span class="response-time">${formatResponseTime(waitData.medianYellow)}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Switch year in popup
+        function switchYear(popupId, communityKey, year) {
+            const communityData = waitTimesData[communityKey];
+            if (!communityData || !communityData.years[year]) return;
+            
+            const waitData = communityData.years[year];
+            
+            // Update grid content
+            const gridEl = document.getElementById(`${popupId}-grid`);
+            if (gridEl) {
+                gridEl.innerHTML = createWaitTimesGridHtml(waitData);
+            }
+            
+            // Update total
+            const totalEl = document.getElementById(`${popupId}-total`);
+            if (totalEl) {
+                totalEl.textContent = `${formatNumber(waitData.eventsTotal)} calls`;
+            }
+        }
+
         // Create popup content for a single station
         function createSingleStationPopup(props) {
             const markerType = getMarkerType(props.tags || []);
             const tags = (props.tags || []).filter(t => t && t.trim() !== '');
+            const communityData = getWaitTimeForStation(props.location);
+            const popupId = generatePopupId();
 
             const tagsHtml = tags.map(tag =>
                 `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
@@ -1000,6 +1479,7 @@ MACKENZIE - 532 Remote
                     </div>
                     <div class="popup-address">${props.address || 'Address not available'}</div>
                     ${tagsHtml ? `<div class="popup-tags">${tagsHtml}</div>` : ''}
+                    ${createWaitTimesHtml(communityData, popupId, props.location)}
                 </div>
             `;
         }
@@ -1009,6 +1489,20 @@ MACKENZIE - 532 Remote
             const primaryProps = primaryStation.properties;
             const primaryMarkerType = getMarkerType(primaryProps.tags || []);
             const primaryTags = (primaryProps.tags || []).filter(t => t && t.trim() !== '');
+            const popupId = generatePopupId();
+            
+            // Find wait time data from ANY station at this location
+            const allStations = [primaryStation, ...colocatedStations];
+            let communityData = null;
+            let dataSourceLocation = null;
+            for (const station of allStations) {
+                const data = getWaitTimeForStation(station.properties.location);
+                if (data && Object.keys(data.years || {}).length > 0) {
+                    communityData = data;
+                    dataSourceLocation = station.properties.location;
+                    break;
+                }
+            }
 
             const primaryTagsHtml = primaryTags.map(tag =>
                 `<span class="tag tag-${tag}">${tagLabels[tag] || tag}</span>`
@@ -1049,6 +1543,7 @@ MACKENZIE - 532 Remote
                         <div class="colocated-title">Also at this location</div>
                         ${colocatedHtml}
                     </div>
+                    ${createWaitTimesHtml(communityData, popupId, dataSourceLocation || primaryProps.location)}
                 </div>
             `;
         }
