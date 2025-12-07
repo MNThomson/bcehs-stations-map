@@ -85,40 +85,39 @@
             --type-cct: #ec1c24;
         }
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-dark: #0f1419;
-                --bg-card: #1a1f26;
-                --bg-card-alt: #242b35;
-                --bg-input: #0f1419;
-                --bg-hover: #242b35;
-                --accent-red: #e63946;
-                --accent-orange: #f4a261;
-                --accent-orange-dark: #e67e22;
-                --accent-blue: #457b9d;
-                --text-primary: #f1faee;
-                --text-secondary: #a8b2c1;
-                --border-color: #2d3748;
-                --shadow-sm: rgba(0, 0, 0, 0.2);
-                --shadow-md: rgba(0, 0, 0, 0.3);
-                --shadow-lg: rgba(0, 0, 0, 0.4);
-                --shadow-xl: rgba(0, 0, 0, 0.5);
-                --overlay-bg: rgba(0, 0, 0, 0.7);
-                --muted-marker: #3a3f47;
-                --btn-active-text: #000;
+        /* Dark mode (applied via JS based on system preference or user choice) */
+        :root[data-theme="dark"] {
+            --bg-dark: #0f1419;
+            --bg-card: #1a1f26;
+            --bg-card-alt: #242b35;
+            --bg-input: #0f1419;
+            --bg-hover: #242b35;
+            --accent-red: #e63946;
+            --accent-orange: #f4a261;
+            --accent-orange-dark: #e67e22;
+            --accent-blue: #457b9d;
+            --text-primary: #f1faee;
+            --text-secondary: #a8b2c1;
+            --border-color: #2d3748;
+            --shadow-sm: rgba(0, 0, 0, 0.2);
+            --shadow-md: rgba(0, 0, 0, 0.3);
+            --shadow-lg: rgba(0, 0, 0, 0.4);
+            --shadow-xl: rgba(0, 0, 0, 0.5);
+            --overlay-bg: rgba(0, 0, 0, 0.7);
+            --muted-marker: #3a3f47;
+            --btn-active-text: #000;
 
-                /* Tag colors - dark mode */
-                --tag-cp-bg: rgba(230, 57, 70, 0.2);
-                --tag-cp-text: #ff6b7a;
-                --tag-soc-bg: rgba(244, 162, 97, 0.2);
-                --tag-soc-text: #f4a261;
-                --tag-annex-text: #9ca3af;
-                --tag-dispatch-text: #4ade80;
-                --tag-special-text: #fde047;
-                --tag-cct-text: #f87171;
-                --tag-laat-bg: rgba(52, 152, 219, 0.2);
-                --tag-laat-text: #5dade2;
-            }
+            /* Tag colors - dark mode */
+            --tag-cp-bg: rgba(230, 57, 70, 0.2);
+            --tag-cp-text: #ff6b7a;
+            --tag-soc-bg: rgba(244, 162, 97, 0.2);
+            --tag-soc-text: #f4a261;
+            --tag-annex-text: #9ca3af;
+            --tag-dispatch-text: #4ade80;
+            --tag-special-text: #fde047;
+            --tag-cct-text: #f87171;
+            --tag-laat-bg: rgba(52, 152, 219, 0.2);
+            --tag-laat-text: #5dade2;
         }
 
         * {
@@ -710,6 +709,46 @@
             font-size: 1rem;
         }
 
+        /* Theme toggle button */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .theme-toggle {
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-hover));
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.6rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            width: 42px;
+            height: 42px;
+        }
+
+        .theme-toggle:hover {
+            background: linear-gradient(135deg, var(--bg-hover), var(--border-color));
+            border-color: var(--accent-orange);
+        }
+
+        .theme-toggle .theme-icon {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        /* Light mode: show moon (to switch to dark) */
+        .theme-toggle .icon-sun { display: none; }
+        .theme-toggle .icon-moon { display: block; }
+
+        /* Dark mode: show sun (to switch to light) */
+        :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+        :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
         /* Modal overlay */
         .modal-overlay {
             position: fixed;
@@ -895,6 +934,20 @@
                 display: none;
             }
 
+            .header-actions {
+                gap: 0.5rem;
+            }
+
+            .theme-toggle {
+                width: 36px;
+                height: 36px;
+                padding: 0.4rem;
+            }
+
+            .theme-toggle .theme-icon {
+                font-size: 0.95rem;
+            }
+
             .filter-btn {
                 padding: 0.5rem 0.75rem;
                 font-size: 0.8rem;
@@ -933,10 +986,18 @@
                 <div class="stat-label">Total Responses</div>
             </div>
         </div>
-        <button class="filter-btn" id="filterBtn" onclick="toggleFilterModal()">
-            <span class="filter-icon">📋</span>
-            <span id="filterBtnText">Filter by Email</span>
-        </button>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle dark/light mode">
+                <span class="theme-icon">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </span>
+            </button>
+            <button class="filter-btn" id="filterBtn" onclick="toggleFilterModal()">
+                <span class="filter-icon">📋</span>
+                <span id="filterBtnText">Filter</span>
+            </button>
+        </div>
     </header>
 
     <!-- Filter Modal -->
@@ -1009,23 +1070,41 @@ MACKENZIE - 532 Remote
         let markersLayer = null;
         let tileLayer = null;
 
-        // Get tile URL based on color scheme
-        function getTileUrl() {
-            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            return isDark
-                ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-                : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+        // Theme management
+        function getEffectiveTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) return savedTheme;
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
 
-        // Update tile layer when color scheme changes
-        function updateTileLayer() {
+        function getTileUrl(theme) {
+            const style = (theme || getEffectiveTheme()) === 'dark' ? 'dark_all' : 'light_all';
+            return `https://{s}.basemaps.cartocdn.com/${style}/{z}/{x}/{y}{r}.png`;
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
             if (tileLayer && map) {
-                tileLayer.setUrl(getTileUrl());
+                tileLayer.setUrl(getTileUrl(theme));
             }
         }
 
-        // Listen for color scheme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTileLayer);
+        // Toggle theme
+        function toggleTheme() {
+            const newTheme = getEffectiveTheme() === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+        }
+
+        // Initialize theme on page load (applies data-theme for both system pref and saved pref)
+        applyTheme(getEffectiveTheme());
+
+        // Listen for system color scheme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(getEffectiveTheme());
+            }
+        });
 
         // Normalize community name for matching
         function normalizeCommunity(name) {
@@ -1313,7 +1392,7 @@ MACKENZIE - 532 Remote
                 btnText.innerHTML = `Clear Filter <span class="filter-count">${filteredStationNumbers.size}</span>`;
             } else {
                 btn.classList.remove('active');
-                btnText.textContent = 'Filter by Email';
+                btnText.textContent = 'Filter';
             }
         }
 
