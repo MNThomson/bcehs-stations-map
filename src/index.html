@@ -1024,6 +1024,10 @@ MACKENZIE - 532 Remote
         function computeMultiStationCommunities() {
             const stationsByCommunity = {};
             stationsData.features.forEach(feature => {
+                // Skip Duty Supervisor Group stations
+                if (feature.properties.location === 'Duty Supervisor Group') {
+                    return;
+                }
                 const communityKey = getCommunityKey(feature.properties.location);
                 if (!stationsByCommunity[communityKey]) {
                     stationsByCommunity[communityKey] = [];
@@ -1236,8 +1240,9 @@ MACKENZIE - 532 Remote
             });
 
         function initMap() {
-            // Update stats
-            document.getElementById('total-stations').textContent = stationsData.features.length;
+            // Update stats (exclude Duty Supervisor Group stations)
+            const displayedStations = stationsData.features.filter(f => f.properties.location !== 'Duty Supervisor Group');
+            document.getElementById('total-stations').textContent = displayedStations.length;
             
             // Calculate total calls using most recent year for each community
             const totalCalls = Object.values(waitTimesData).reduce((sum, community) => {
@@ -1344,6 +1349,10 @@ MACKENZIE - 532 Remote
         function groupStationsByLocation() {
             const locationGroups = {};
             stationsData.features.forEach(feature => {
+                // Skip Duty Supervisor Group stations
+                if (feature.properties.location === 'Duty Supervisor Group') {
+                    return;
+                }
                 const coordKey = feature.geometry.coordinates.join(',');
                 if (!locationGroups[coordKey]) {
                     locationGroups[coordKey] = [];
