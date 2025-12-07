@@ -52,6 +52,13 @@
             --text-primary: #f1faee;
             --text-secondary: #a8b2c1;
             --border-color: #2d3748;
+
+            /* Station type colors */
+            --type-station: #004a8d;
+            --type-annex: #6b7280;
+            --type-dispatch: #22c55e;
+            --type-special: #ffd000;
+            --type-cct: #ec1c24;
         }
 
         * {
@@ -197,11 +204,11 @@
             flex-shrink: 0;
         }
 
-        .popup-icon.station { background: linear-gradient(135deg, #004a8d, #003366); }
-        .popup-icon.annex { background: linear-gradient(135deg, #6b7280, #4b5563); }
-        .popup-icon.dispatch { background: linear-gradient(135deg, #22c55e, #16a34a); }
-        .popup-icon.special { background: linear-gradient(135deg, #ffd000, #ffdd00); }
-        .popup-icon.cct { background: linear-gradient(135deg, #ec1c24, #c41e3a); }
+        .popup-icon.station { background: linear-gradient(135deg, var(--type-station), color-mix(in srgb, var(--type-station) 70%, black)); }
+        .popup-icon.annex { background: linear-gradient(135deg, var(--type-annex), color-mix(in srgb, var(--type-annex) 70%, black)); }
+        .popup-icon.dispatch { background: linear-gradient(135deg, var(--type-dispatch), color-mix(in srgb, var(--type-dispatch) 70%, black)); }
+        .popup-icon.special { background: linear-gradient(135deg, var(--type-special), color-mix(in srgb, var(--type-special) 90%, white)); }
+        .popup-icon.cct { background: linear-gradient(135deg, var(--type-cct), color-mix(in srgb, var(--type-cct) 70%, black)); }
 
         .popup-title {
             font-size: 1rem;
@@ -239,11 +246,11 @@
 
         .tag-cp { background: rgba(230, 57, 70, 0.2); color: #ff6b7a; }
         .tag-soc { background: rgba(244, 162, 97, 0.2); color: var(--accent-orange); }
-        .tag-annex { background: rgba(69, 123, 157, 0.2); color: #6ba3c7; }
-        .tag-dispatch { background: rgba(155, 89, 182, 0.2); color: #c39bd3; }
-        .tag-special { background: rgba(244, 162, 97, 0.2); color: var(--accent-orange); }
-        .tag-cct { background: rgba(39, 174, 96, 0.2); color: #58d68d; }
-        .tag-crs { background: rgba(241, 196, 15, 0.2); color: #f7dc6f; }
+        .tag-annex { background: color-mix(in srgb, var(--type-annex) 20%, transparent); color: var(--type-annex); }
+        .tag-dispatch { background: color-mix(in srgb, var(--type-dispatch) 20%, transparent); color: var(--type-dispatch); }
+        .tag-special { background: color-mix(in srgb, var(--type-special) 20%, transparent); color: var(--type-special); }
+        .tag-cct { background: color-mix(in srgb, var(--type-cct) 20%, transparent); color: var(--type-cct); }
+        .tag-crs { background: color-mix(in srgb, var(--type-special) 20%, transparent); color: var(--type-special); }
         .tag-laat { background: rgba(52, 152, 219, 0.2); color: #5dade2; }
 
         /* Wait times section */
@@ -437,11 +444,11 @@
             flex-shrink: 0;
         }
 
-        .colocated-icon.station { background: linear-gradient(135deg, #004a8d, #003366); }
-        .colocated-icon.annex { background: linear-gradient(135deg, #6b7280, #4b5563); }
-        .colocated-icon.dispatch { background: linear-gradient(135deg, #22c55e, #16a34a); }
-        .colocated-icon.special { background: linear-gradient(135deg, #ffd000, #ffdd00); }
-        .colocated-icon.cct { background: linear-gradient(135deg, #ec1c24, #c41e3a); }
+        .colocated-icon.station { background: linear-gradient(135deg, var(--type-station), color-mix(in srgb, var(--type-station) 70%, black)); }
+        .colocated-icon.annex { background: linear-gradient(135deg, var(--type-annex), color-mix(in srgb, var(--type-annex) 70%, black)); }
+        .colocated-icon.dispatch { background: linear-gradient(135deg, var(--type-dispatch), color-mix(in srgb, var(--type-dispatch) 70%, black)); }
+        .colocated-icon.special { background: linear-gradient(135deg, var(--type-special), color-mix(in srgb, var(--type-special) 90%, white)); }
+        .colocated-icon.cct { background: linear-gradient(135deg, var(--type-cct), color-mix(in srgb, var(--type-cct) 70%, black)); }
 
         .colocated-name {
             font-size: 0.85rem;
@@ -522,11 +529,11 @@
             border-radius: 50%;
         }
 
-        .legend-marker.station { background: #004a8d; }
-        .legend-marker.annex { background: #6b7280; }
-        .legend-marker.dispatch { background: #22c55e; }
-        .legend-marker.special { background: #ffd000; }
-        .legend-marker.cct { background: #ec1c24; }
+        .legend-marker.station { background: var(--type-station); }
+        .legend-marker.annex { background: var(--type-annex); }
+        .legend-marker.dispatch { background: var(--type-dispatch); }
+        .legend-marker.special { background: var(--type-special); }
+        .legend-marker.cct { background: var(--type-cct); }
 
         /* Custom marker styles */
         .custom-marker {
@@ -547,11 +554,11 @@
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
-        .marker-pin.station { background: #004a8d; }
-        .marker-pin.annex { background: #6b7280; opacity: 0.7; }
-        .marker-pin.dispatch { background: #22c55e; }
-        .marker-pin.special { background: #ffd000; }
-        .marker-pin.cct { background: #ec1c24; }
+        .marker-pin.station { background: var(--type-station); }
+        .marker-pin.annex { background: var(--type-annex); opacity: 0.7; }
+        .marker-pin.dispatch { background: var(--type-dispatch); }
+        .marker-pin.special { background: var(--type-special); }
+        .marker-pin.cct { background: var(--type-cct); }
 
         .marker-inner {
             width: 8px;
