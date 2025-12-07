@@ -1213,12 +1213,15 @@ MACKENZIE - 532 Remote
             // Update stats
             document.getElementById('total-stations').textContent = stationsData.features.length;
             
-            // Calculate total calls from 2024 across all communities
-            const totalCalls2024 = Object.values(waitTimesData).reduce((sum, community) => {
-                const year2024 = community.years[2024];
-                return sum + (year2024 ? year2024.eventsTotal : 0);
+            // Calculate total calls using most recent year for each community
+            const totalCalls = Object.values(waitTimesData).reduce((sum, community) => {
+                const mostRecentYear = getMostRecentYear(community);
+                if (mostRecentYear && community.years[mostRecentYear]) {
+                    return sum + community.years[mostRecentYear].eventsTotal;
+                }
+                return sum;
             }, 0);
-            document.getElementById('total-calls').textContent = totalCalls2024.toLocaleString();
+            document.getElementById('total-calls').textContent = totalCalls.toLocaleString();
 
             // Initialize map centered on BC
             map = L.map('map', {
