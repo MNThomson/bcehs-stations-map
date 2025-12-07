@@ -950,7 +950,6 @@ MACKENZIE - 532 Remote
             // Large cities - multiple stations map to single city data
             'kamloops north': 'kamloops',
             'kamloops south': 'kamloops',
-            'kamloops cct': 'kamloops',
             'kamloops dispatch operations centre': 'kamloops',
             'nanaimo south': 'nanaimo',
             'nanaimo north': 'nanaimo',
@@ -977,8 +976,6 @@ MACKENZIE - 532 Remote
             'ubc': 'vancouver',
             'yvr airport bike squad': 'vancouver',
             'st pauls hospital': 'vancouver',
-            'special operations': 'vancouver',
-            'paramedic specialists': 'vancouver',
             'vancouver dispatch': 'vancouver',
             
             // Surrey area
@@ -999,6 +996,9 @@ MACKENZIE - 532 Remote
             'abbotsford mt lehman': 'abbotsford',
             'lions bay': 'west vancouver',
         };
+
+        // Communities with multiple stations (computed after data loads)
+        let multiStationCommunities = new Set();
 
         // Extract community name from station location field
         function extractCommunity(location) {
@@ -1021,11 +1021,37 @@ MACKENZIE - 532 Remote
             return normalized;
         }
 
-        // Check if station uses aggregate/mapped data (not exact match)
+        // Compute which communities have multiple stations
+        function computeMultiStationCommunities() {
+            const stationsByCommunity = {};
+            stationsData.features.forEach(feature => {
+                const communityKey = getCommunityKey(feature.properties.location);
+                if (!stationsByCommunity[communityKey]) {
+                    stationsByCommunity[communityKey] = [];
+                }
+                stationsByCommunity[communityKey].push(feature);
+            });
+
+            multiStationCommunities = new Set();
+            for (const [key, stations] of Object.entries(stationsByCommunity)) {
+                if (stations.length > 1) {
+                    multiStationCommunities.add(key);
+                }
+            }
+            console.log(`Found ${multiStationCommunities.size} communities with multiple stations`);
+        }
+
+        // Check if station uses aggregate/mapped data (shares data with other stations)
         function isAggregateData(location) {
             const extracted = extractCommunity(location);
             const normalized = normalizeCommunity(extracted);
-            return stationToCommunityMap.hasOwnProperty(normalized);
+            const communityKey = getCommunityKey(location);
+
+            // Show aggregate notice if:
+            // 1. There's a manual mapping for this station, OR
+            // 2. Multiple stations share this community's data
+            return stationToCommunityMap.hasOwnProperty(normalized) ||
+                   multiStationCommunities.has(communityKey);
         }
 
         // Get display name for the data source region
@@ -1203,6 +1229,7 @@ MACKENZIE - 532 Remote
                 const csvData = parseCSV(csvText);
                 waitTimesData = indexWaitTimes(csvData);
                 console.log(`Loaded ${Object.keys(waitTimesData).length} communities with wait time data`);
+                computeMultiStationCommunities();
                 initMap();
             })
             .catch(error => {
