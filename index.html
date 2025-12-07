@@ -487,15 +487,17 @@
 
         /* Legend */
         .legend {
-            position: absolute;
-            bottom: 30px;
-            left: 20px;
+            visibility: hidden;
+            width: fit-content;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1rem;
-            z-index: 1000;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .leaflet-bottom .legend {
+            visibility: visible;
         }
 
         .legend h3 {
@@ -827,9 +829,6 @@
             }
 
             .legend {
-                bottom: 20px;
-                left: 10px;
-                right: auto;
                 max-width: 180px;
             }
 
@@ -905,6 +904,10 @@ MACKENZIE - 532 Remote
         <div class="legend-item">
             <div class="legend-marker dispatch"></div>
             <span>Dispatch</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-marker special"></div>
+            <span>Special Ops</span>
         </div>
         <div class="legend-item">
             <div class="legend-marker cct"></div>
@@ -1260,6 +1263,13 @@ MACKENZIE - 532 Remote
 
             // Create markers layer
             markersLayer = L.layerGroup().addTo(map);
+
+            // Move legend into Leaflet's bottom-left control container
+            const legendEl = document.querySelector('.legend');
+            const bottomLeft = document.querySelector('.leaflet-bottom.leaflet-left');
+            if (legendEl && bottomLeft) {
+                bottomLeft.appendChild(legendEl);
+            }
 
             // Add markers
             addMarkersToMap();
