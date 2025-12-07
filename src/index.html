@@ -44,14 +44,38 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0f1419;
-            --bg-card: #1a1f26;
-            --accent-red: #e63946;
-            --accent-orange: #f4a261;
-            --accent-blue: #457b9d;
-            --text-primary: #f1faee;
-            --text-secondary: #a8b2c1;
-            --border-color: #2d3748;
+            /* Light mode (default) */
+            --bg-dark: #f5f7fa;
+            --bg-card: #ffffff;
+            --bg-card-alt: #f8fafc;
+            --bg-input: #f8fafc;
+            --bg-hover: #f1f5f9;
+            --accent-red: #dc2626;
+            --accent-orange: #ea580c;
+            --accent-orange-dark: #c2410c;
+            --accent-blue: #2563eb;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: rgba(0, 0, 0, 0.08);
+            --shadow-md: rgba(0, 0, 0, 0.1);
+            --shadow-lg: rgba(0, 0, 0, 0.15);
+            --shadow-xl: rgba(0, 0, 0, 0.2);
+            --overlay-bg: rgba(0, 0, 0, 0.4);
+            --muted-marker: #9ca3af;
+            --btn-active-text: #fff;
+
+            /* Tag colors - light mode */
+            --tag-cp-bg: rgba(220, 38, 38, 0.1);
+            --tag-cp-text: #b91c1c;
+            --tag-soc-bg: rgba(234, 88, 12, 0.1);
+            --tag-soc-text: #c2410c;
+            --tag-annex-text: #4b5563;
+            --tag-dispatch-text: #15803d;
+            --tag-special-text: #a16207;
+            --tag-cct-text: #b91c1c;
+            --tag-laat-bg: rgba(37, 99, 235, 0.1);
+            --tag-laat-text: #1d4ed8;
 
             /* Station type colors */
             --type-station: #004a8d;
@@ -59,6 +83,42 @@
             --type-dispatch: #22c55e;
             --type-special: #ffd000;
             --type-cct: #ec1c24;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-dark: #0f1419;
+                --bg-card: #1a1f26;
+                --bg-card-alt: #242b35;
+                --bg-input: #0f1419;
+                --bg-hover: #242b35;
+                --accent-red: #e63946;
+                --accent-orange: #f4a261;
+                --accent-orange-dark: #e67e22;
+                --accent-blue: #457b9d;
+                --text-primary: #f1faee;
+                --text-secondary: #a8b2c1;
+                --border-color: #2d3748;
+                --shadow-sm: rgba(0, 0, 0, 0.2);
+                --shadow-md: rgba(0, 0, 0, 0.3);
+                --shadow-lg: rgba(0, 0, 0, 0.4);
+                --shadow-xl: rgba(0, 0, 0, 0.5);
+                --overlay-bg: rgba(0, 0, 0, 0.7);
+                --muted-marker: #3a3f47;
+                --btn-active-text: #000;
+
+                /* Tag colors - dark mode */
+                --tag-cp-bg: rgba(230, 57, 70, 0.2);
+                --tag-cp-text: #ff6b7a;
+                --tag-soc-bg: rgba(244, 162, 97, 0.2);
+                --tag-soc-text: #f4a261;
+                --tag-annex-text: #9ca3af;
+                --tag-dispatch-text: #4ade80;
+                --tag-special-text: #fde047;
+                --tag-cct-text: #f87171;
+                --tag-laat-bg: rgba(52, 152, 219, 0.2);
+                --tag-laat-text: #5dade2;
+            }
         }
 
         * {
@@ -80,7 +140,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, var(--bg-card) 0%, #242b35 100%);
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-alt) 100%);
             padding: 1.25rem 2rem;
             border-bottom: 1px solid var(--border-color);
             display: flex;
@@ -88,6 +148,7 @@
             justify-content: space-between;
             position: relative;
             z-index: 1000;
+            box-shadow: 0 1px 3px var(--shadow-sm);
         }
 
         .header::before {
@@ -164,7 +225,7 @@
             color: var(--text-primary);
             border-radius: 12px;
             padding: 0;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 40px var(--shadow-lg);
             border: 1px solid var(--border-color);
         }
 
@@ -244,14 +305,14 @@
             letter-spacing: 0.03em;
         }
 
-        .tag-cp { background: rgba(230, 57, 70, 0.2); color: #ff6b7a; }
-        .tag-soc { background: rgba(244, 162, 97, 0.2); color: var(--accent-orange); }
-        .tag-annex { background: color-mix(in srgb, var(--type-annex) 20%, transparent); color: var(--type-annex); }
-        .tag-dispatch { background: color-mix(in srgb, var(--type-dispatch) 20%, transparent); color: var(--type-dispatch); }
-        .tag-special { background: color-mix(in srgb, var(--type-special) 20%, transparent); color: var(--type-special); }
-        .tag-cct { background: color-mix(in srgb, var(--type-cct) 20%, transparent); color: var(--type-cct); }
-        .tag-crs { background: color-mix(in srgb, var(--type-special) 20%, transparent); color: var(--type-special); }
-        .tag-laat { background: rgba(52, 152, 219, 0.2); color: #5dade2; }
+        .tag-cp { background: var(--tag-cp-bg); color: var(--tag-cp-text); }
+        .tag-soc { background: var(--tag-soc-bg); color: var(--tag-soc-text); }
+        .tag-annex { background: color-mix(in srgb, var(--type-annex) 15%, transparent); color: var(--tag-annex-text); }
+        .tag-dispatch { background: color-mix(in srgb, var(--type-dispatch) 15%, transparent); color: var(--tag-dispatch-text); }
+        .tag-special { background: color-mix(in srgb, var(--type-special) 15%, transparent); color: var(--tag-special-text); }
+        .tag-cct { background: color-mix(in srgb, var(--type-cct) 15%, transparent); color: var(--tag-cct-text); }
+        .tag-crs { background: color-mix(in srgb, var(--type-special) 15%, transparent); color: var(--tag-special-text); }
+        .tag-laat { background: var(--tag-laat-bg); color: var(--tag-laat-text); }
 
         /* Wait times section */
         .wait-times-section {
@@ -286,7 +347,7 @@
         }
 
         .wait-time-item {
-            background: rgba(255, 255, 255, 0.03);
+            background: color-mix(in srgb, var(--text-primary) 3%, transparent);
             border-radius: 8px;
             padding: 0.5rem;
             text-align: center;
@@ -332,10 +393,21 @@
             position: relative;
         }
 
+        .year-selector::after {
+            content: '▾';
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: var(--accent-orange);
+            font-size: 0.7rem;
+        }
+
         .year-select {
             appearance: none;
             -webkit-appearance: none;
-            background: rgba(255, 255, 255, 0.05);
+            background: color-mix(in srgb, var(--text-primary) 5%, transparent);
             border: 1px solid var(--border-color);
             border-radius: 6px;
             padding: 0.3rem 1.8rem 0.3rem 0.6rem;
@@ -345,20 +417,17 @@
             cursor: pointer;
             font-family: 'DM Sans', sans-serif;
             transition: all 0.15s ease;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23f4a261' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 0.5rem center;
         }
 
         .year-select:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: color-mix(in srgb, var(--text-primary) 8%, transparent);
             border-color: var(--accent-orange);
         }
 
         .year-select:focus {
             outline: none;
             border-color: var(--accent-orange);
-            box-shadow: 0 0 0 2px rgba(244, 162, 97, 0.2);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-orange) 20%, transparent);
         }
 
         .year-select option {
@@ -376,8 +445,8 @@
             display: flex;
             align-items: center;
             gap: 0.4rem;
-            background: rgba(69, 123, 157, 0.15);
-            border: 1px solid rgba(69, 123, 157, 0.3);
+            background: color-mix(in srgb, var(--accent-blue) 10%, transparent);
+            border: 1px solid color-mix(in srgb, var(--accent-blue) 25%, transparent);
             border-radius: 6px;
             padding: 0.4rem 0.6rem;
             margin-bottom: 0.5rem;
@@ -415,7 +484,7 @@
         }
 
         .colocated-group {
-            background: rgba(255, 255, 255, 0.03);
+            background: color-mix(in srgb, var(--text-primary) 3%, transparent);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 0.6rem;
@@ -482,9 +551,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #000;
-            border: 2px solid var(--bg-dark);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            color: var(--btn-active-text);
+            border: 2px solid var(--bg-card);
+            box-shadow: 0 2px 4px var(--shadow-md);
         }
 
         .custom-marker-wrapper {
@@ -500,7 +569,7 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px var(--shadow-md);
         }
 
         .leaflet-bottom .legend {
@@ -550,8 +619,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 2px 8px var(--shadow-lg);
+            border: 2px solid rgba(255, 255, 255, 0.5);
         }
 
         .marker-pin.station { background: var(--type-station); }
@@ -571,7 +640,7 @@
         /* Zoom controls */
         .leaflet-control-zoom {
             border: none !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+            box-shadow: 0 4px 15px var(--shadow-md) !important;
         }
 
         .leaflet-control-zoom a {
@@ -581,7 +650,7 @@
         }
 
         .leaflet-control-zoom a:hover {
-            background: #242b35 !important;
+            background: var(--bg-hover) !important;
         }
 
         .leaflet-control-zoom-in {
@@ -607,7 +676,7 @@
 
         /* Filter button */
         .filter-btn {
-            background: linear-gradient(135deg, var(--bg-card), #242b35);
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-hover));
             border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 0.6rem 1rem;
@@ -623,18 +692,18 @@
         }
 
         .filter-btn:hover {
-            background: linear-gradient(135deg, #242b35, #2d3748);
+            background: linear-gradient(135deg, var(--bg-hover), var(--border-color));
             border-color: var(--accent-orange);
         }
 
         .filter-btn.active {
-            background: linear-gradient(135deg, var(--accent-orange), #e67e22);
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-dark));
             border-color: var(--accent-orange);
-            color: #000;
+            color: var(--btn-active-text);
         }
 
         .filter-btn.active:hover {
-            background: linear-gradient(135deg, #e67e22, var(--accent-orange));
+            background: linear-gradient(135deg, var(--accent-orange-dark), var(--accent-orange));
         }
 
         .filter-icon {
@@ -648,7 +717,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: var(--overlay-bg);
             backdrop-filter: blur(4px);
             display: flex;
             align-items: center;
@@ -674,7 +743,7 @@
             overflow: hidden;
             transform: scale(0.9) translateY(20px);
             transition: transform 0.3s ease;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 60px var(--shadow-xl);
         }
 
         .modal-overlay.visible .modal {
@@ -726,7 +795,7 @@
         .email-textarea {
             width: 100%;
             height: 200px;
-            background: var(--bg-dark);
+            background: var(--bg-input);
             border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 1rem;
@@ -776,18 +845,18 @@
         }
 
         .modal-btn.primary {
-            background: linear-gradient(135deg, var(--accent-orange), #e67e22);
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-dark));
             border: none;
-            color: #000;
+            color: var(--btn-active-text);
         }
 
         .modal-btn.primary:hover {
-            background: linear-gradient(135deg, #e67e22, var(--accent-orange));
+            background: linear-gradient(135deg, var(--accent-orange-dark), var(--accent-orange));
         }
 
         /* Muted marker styles */
         .marker-pin.muted {
-            background: #3a3f47 !important;
+            background: var(--muted-marker) !important;
             opacity: 0.4 !important;
         }
 
@@ -938,6 +1007,25 @@ MACKENZIE - 532 Remote
         let filteredStationNumbers = new Set();
         let map = null;
         let markersLayer = null;
+        let tileLayer = null;
+
+        // Get tile URL based on color scheme
+        function getTileUrl() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            return isDark
+                ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+                : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+        }
+
+        // Update tile layer when color scheme changes
+        function updateTileLayer() {
+            if (tileLayer && map) {
+                tileLayer.setUrl(getTileUrl());
+            }
+        }
+
+        // Listen for color scheme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTileLayer);
 
         // Normalize community name for matching
         function normalizeCommunity(name) {
@@ -1266,9 +1354,9 @@ MACKENZIE - 532 Remote
                 zoomControl: true
             }).setView([53.7267, -127.6476], 5);
 
-            // Add dark tile layer
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            // Add tile layer (automatically picks light/dark based on system preference)
+            tileLayer = L.tileLayer(getTileUrl(), {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; <a href="https://carto.com/attributions">CARTO</a>',
                 subdomains: 'abcd',
                 maxZoom: 19
             }).addTo(map);
